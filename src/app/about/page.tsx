@@ -17,7 +17,7 @@ export default function About() {
                 About Evergreen Futures
               </h1>
               <p className="mt-6 text-lg leading-8 text-gray-600">
-                We are a nonprofit organization dedicated to creating a sustainable future through environmental conservation, education, and community engagement. Our mission is to inspire and empower individuals and communities to take action for a better tomorrow.
+                We empower children and teenagers to explore diverse career paths through dynamic speeches, interactive workshops, and engaging competitions. By connecting them with professionals, we provide practical insights into each career's challenges, rewards, and opportunities.
               </p>
               <div className="mt-10 flex items-center gap-x-6">
                 <Link href="/get-involved" className="btn">
@@ -31,8 +31,8 @@ export default function About() {
             <div className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
               <div className="max-w-3xl flex-none sm:max-w-5xl lg:max-w-none">
                 <Image
-                  src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                  alt="App screenshot"
+                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80"
+                  alt="Students engaged in a workshop"
                   width={2432}
                   height={1442}
                   className="w-[76rem] rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10"
@@ -47,10 +47,10 @@ export default function About() {
           <div className="mx-auto max-w-2xl lg:mx-0">
             <h2 className="text-base font-semibold leading-7 text-primary-600">Our Mission</h2>
             <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Creating a Sustainable Future
+              Empowering Future Leaders
             </p>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              At Evergreen Futures, we believe that every individual has the power to make a difference. Our mission is to create a sustainable future by:
+              At Evergreen Futures, we believe in preparing the next generation for success by:
             </p>
             <ul role="list" className="mt-8 max-w-xl space-y-8 text-gray-600">
               {missionPoints.map((point) => (
@@ -118,38 +118,38 @@ export default function About() {
 }
 
 const missionPoints = [
-  'Protecting and restoring natural habitats and ecosystems',
-  'Educating communities about environmental sustainability',
-  'Promoting renewable energy and sustainable practices',
-  'Fostering community engagement and volunteerism',
-  'Advocating for environmental policies and conservation',
+  'Connecting students with professionals from diverse fields',
+  'Providing practical insights into various career paths',
+  'Organizing interactive workshops and engaging competitions',
+  'Creating a platform for career exploration and discovery',
+  'Preparing youth for real-world challenges and opportunities',
 ]
 
 const values = [
   {
-    name: 'Environmental Stewardship',
-    description: 'We are committed to protecting and preserving our natural resources for future generations.',
+    name: 'Career Exploration',
+    description: 'We believe in exposing students to a wide range of career possibilities to help them make informed decisions about their future.',
     icon: (props: any) => (
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" {...props}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607zM10.5 7.5v6m3-3h-6" />
       </svg>
     ),
   },
   {
-    name: 'Education & Innovation',
-    description: 'We believe in the power of knowledge and innovation to drive positive change.',
+    name: 'Professional Mentorship',
+    description: 'We connect students with experienced professionals who can share real-world insights and guidance.',
+    icon: (props: any) => (
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" {...props}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+      </svg>
+    ),
+  },
+  {
+    name: 'Practical Learning',
+    description: 'We focus on hands-on experiences and real-world applications to prepare students for their future careers.',
     icon: (props: any) => (
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" {...props}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
-      </svg>
-    ),
-  },
-  {
-    name: 'Community First',
-    description: 'We prioritize community engagement and collaboration in all our initiatives.',
-    icon: (props: any) => (
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" {...props}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
       </svg>
     ),
   },
@@ -160,18 +160,18 @@ const team = [
     name: 'Sarah Johnson',
     role: 'Executive Director',
     imageUrl: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
-    bio: 'With over 15 years of experience in environmental conservation, Sarah leads our organization with passion and dedication.',
+    bio: 'With over 15 years of experience in education and youth development, Sarah leads our organization with passion and dedication.',
   },
   {
     name: 'Michael Chen',
     role: 'Program Director',
     imageUrl: 'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
-    bio: 'Michael oversees our educational programs and community initiatives, ensuring we make a lasting impact.',
+    bio: 'Michael oversees our career exploration programs and professional mentorship initiatives, ensuring we make a lasting impact.',
   },
   {
     name: 'Emily Rodriguez',
-    role: 'Conservation Specialist',
+    role: 'Career Development Specialist',
     imageUrl: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80',
-    bio: 'Emily brings expertise in ecosystem restoration and biodiversity conservation to our projects.',
+    bio: 'Emily brings expertise in career counseling and professional development to our programs.',
   },
 ] 
