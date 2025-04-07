@@ -30,8 +30,7 @@ export default function Home() {
                   Building a Sustainable Future Together
                 </h1>
                 <p className="mt-6 text-lg leading-8 text-gray-600">
-                  Evergreen Futures is dedicated to creating a sustainable future through environmental conservation, education, and community engagement. Join us in making a difference.
-                </p>
+                EvergreenFutures empowers children to explore diverse career paths. Our mission is to provide children and teenagers dynamic speeches, interactive workshops, and engaging competitions where we connect them with professionals to gain practical insights into each career's challenges, rewards, opportunities, and prepare them for the real world and the journey ahead!                </p>
                 <div className="mt-10 flex items-center gap-x-6">
                   <Link href="/get-involved" className="btn">
                     Get Involved
