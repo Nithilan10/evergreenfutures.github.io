@@ -27,4 +27,14 @@ jobs:
           FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
           FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
         run: |
-          ftp-deploy --local-dir=. --server=$FTP_SERVER --username=$FTP_USERNAME --password=$FTP_PASSWORD --remote-dir=/html/ 
+          # Create a temporary directory for deployment
+          mkdir -p deploy_temp
+          
+          # Copy only the necessary files
+          cp -r index.html about.html programs.html css images js deploy_temp/
+          
+          # Deploy to IONOS
+          ftp-deploy --local-dir=deploy_temp --server=$FTP_SERVER --username=$FTP_USERNAME --password=$FTP_PASSWORD --remote-dir=/htdocs/
+          
+          # Clean up
+          rm -rf deploy_temp 
