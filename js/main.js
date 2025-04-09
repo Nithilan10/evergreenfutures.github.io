@@ -69,4 +69,48 @@ document.addEventListener('DOMContentLoaded', function() {
         card.classList.add('fade-in');
         observer.observe(card);
     });
+
+    // Get all navigation links
+    const navLinksAll = document.querySelectorAll('.nav-links a');
+    const sections = document.querySelectorAll('section');
+
+    // Function to update active navigation link
+    function updateActiveLink() {
+        let currentSection = '';
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (window.pageYOffset >= sectionTop - 150) {
+                currentSection = section.getAttribute('id');
+            }
+        });
+
+        navLinksAll.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').slice(1) === currentSection) {
+                link.classList.add('active');
+            }
+        });
+    }
+
+    // Smooth scroll for navigation links
+    navLinksAll.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            
+            window.scrollTo({
+                top: targetSection.offsetTop - 80,
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Update active link on scroll
+    window.addEventListener('scroll', updateActiveLink);
+    
+    // Initial call to set active link
+    updateActiveLink();
 }); 
