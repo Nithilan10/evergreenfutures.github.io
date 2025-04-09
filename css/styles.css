@@ -502,4 +502,64 @@ h3 {
 
 .mb-1 { margin-bottom: var(--spacing-sm); }
 .mb-2 { margin-bottom: var(--spacing-md); }
-.mb-3 { margin-bottom: var(--spacing-lg); } 
+.mb-3 { margin-bottom: var(--spacing-lg); }
+
+/* Team Structure */
+.team-structure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-lg);
+}
+
+.co-presidents {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    width: 100%;
+    max-width: 1000px;
+}
+
+.co-presidents .team-member {
+    flex: 1;
+    max-width: 400px;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    border: 2px solid var(--primary-color);
+}
+
+.co-presidents .team-member .role {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.other-leaders {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    width: 100%;
+    max-width: 1000px;
+}
+
+.other-leaders .team-member {
+    flex: 1;
+    max-width: 400px;
+}
+
+@media (max-width: 768px) {
+    .co-presidents,
+    .other-leaders {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .co-presidents .team-member,
+    .other-leaders .team-member {
+        max-width: 100%;
+    }
+    
+    .co-presidents .team-member {
+        transform: scale(1);
+    }
+} 
