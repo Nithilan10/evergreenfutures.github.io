@@ -33,8 +33,13 @@ jobs:
           # Copy only the necessary files
           cp -r index.html about.html programs.html css images js deploy_temp/
           
-          # Deploy to IONOS
-          ftp-deploy --local-dir=deploy_temp --server=$FTP_SERVER --username=$FTP_USERNAME --password=$FTP_PASSWORD --remote-dir=/htdocs/
+          # Set correct permissions
+          find deploy_temp -type f -exec chmod 644 {} \;
+          find deploy_temp -type d -exec chmod 755 {} \;
+          
+          # Deploy to /htdocs/ directory
+          echo "Deploying to /htdocs/ directory..."
+          ftp-deploy --local-dir=deploy_temp --server=$FTP_SERVER --username=$FTP_USERNAME --password=$FTP_PASSWORD --remote-dir=/htdocs/ --verbose
           
           # Clean up
           rm -rf deploy_temp 
