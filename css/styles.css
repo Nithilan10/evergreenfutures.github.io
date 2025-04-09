@@ -510,6 +510,8 @@ h3 {
     flex-direction: column;
     align-items: center;
     gap: var(--spacing-lg);
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .co-presidents {
@@ -517,12 +519,11 @@ h3 {
     justify-content: center;
     gap: var(--spacing-md);
     width: 100%;
-    max-width: 1000px;
 }
 
 .co-presidents .team-member {
     flex: 1;
-    max-width: 400px;
+    max-width: 300px;
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     border: 2px solid var(--primary-color);
@@ -539,12 +540,43 @@ h3 {
     justify-content: center;
     gap: var(--spacing-md);
     width: 100%;
-    max-width: 1000px;
 }
 
 .other-leaders .team-member {
     flex: 1;
-    max-width: 400px;
+    max-width: 300px;
+}
+
+.team-member {
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.team-member h3 {
+    margin-top: var(--spacing-sm);
+    padding: 0 var(--spacing-sm);
+}
+
+.team-member .role {
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-bottom: var(--spacing-sm);
+    padding: 0 var(--spacing-sm);
+}
+
+.team-member .bio {
+    padding: 0 var(--spacing-sm) var(--spacing-sm);
+    color: #666;
 }
 
 @media (max-width: 768px) {
@@ -557,9 +589,14 @@ h3 {
     .co-presidents .team-member,
     .other-leaders .team-member {
         max-width: 100%;
+        width: 100%;
     }
     
     .co-presidents .team-member {
         transform: scale(1);
+    }
+    
+    .team-member img {
+        height: 250px;
     }
 } 

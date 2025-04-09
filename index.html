@@ -9,19 +9,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header class="header">
-        <nav class="nav container">
-            <a href="index.html" class="logo">Evergreen Futures</a>
-            <button class="mobile-menu-btn">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <div class="nav-links">
-                <a href="index.html" class="active">Home</a>
-                <a href="about.html">About</a>
-                <a href="programs.html">Programs</a>
-                <a href="contact.html">Contact</a>
+    <header>
+        <nav>
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <img src="public/images/b4797504-b3ff-4740-87c6-e7dc980fb386.jpeg" alt="Evergreen Futures Logo" class="logo-image">
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
             </div>
         </nav>
     </header>
@@ -38,7 +37,7 @@
                     </div>
                 </div>
                 <div class="hero-image">
-                    <img src="images/hero.jpg" alt="Students engaged in career exploration workshop">
+                    <img src="public/images/download.jpeg" alt="Students engaged in career exploration workshop">
                 </div>
             </div>
         </section>
@@ -76,11 +75,14 @@
 
         <section class="programs">
             <div class="container">
-                <h2>Featured Programs</h2>
+                <div class="section-header">
+                    <h2>Featured Programs</h2>
+                    <p>Discover our initiatives designed to inspire and educate the next generation</p>
+                </div>
                 <div class="programs-grid">
                     <div class="program-card">
                         <div class="program-image">
-                            <img src="images/program-1.jpg" alt="Career Interview Series">
+                            <img src="public/images/download.jpeg" alt="Career Interview Series">
                         </div>
                         <div class="program-content">
                             <h3>Career Interview Series</h3>
@@ -89,13 +91,13 @@
                                 <span class="category"><i class="fas fa-tag"></i> Video Series</span>
                                 <span class="date"><i class="fas fa-calendar"></i> Weekly</span>
                             </div>
-                            <a href="programs.html" class="btn btn-secondary">Learn More</a>
+                            <a href="programs.html" class="btn btn-primary">Learn More</a>
                         </div>
                     </div>
 
                     <div class="program-card">
                         <div class="program-image">
-                            <img src="images/program-2.jpg" alt="Career Exploration Workshop">
+                            <img src="public/images/download.jpeg" alt="Career Exploration Workshop">
                         </div>
                         <div class="program-content">
                             <h3>Career Exploration Workshop</h3>
@@ -104,13 +106,13 @@
                                 <span class="category"><i class="fas fa-tag"></i> Workshop</span>
                                 <span class="date"><i class="fas fa-calendar"></i> Monthly</span>
                             </div>
-                            <a href="programs.html" class="btn btn-secondary">Learn More</a>
+                            <a href="programs.html" class="btn btn-primary">Learn More</a>
                         </div>
                     </div>
 
                     <div class="program-card">
                         <div class="program-image">
-                            <img src="images/program-3.jpg" alt="College Preparation Program">
+                            <img src="public/images/download.jpeg" alt="College Preparation Program">
                         </div>
                         <div class="program-content">
                             <h3>College Preparation Program</h3>
@@ -119,8 +121,39 @@
                                 <span class="category"><i class="fas fa-tag"></i> Education</span>
                                 <span class="date"><i class="fas fa-calendar"></i> Quarterly</span>
                             </div>
-                            <a href="programs.html" class="btn btn-secondary">Learn More</a>
+                            <a href="programs.html" class="btn btn-primary">Learn More</a>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="impact">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Impact</h2>
+                    <p>Making a difference in students' lives through career exploration</p>
+                </div>
+                <div class="impact-stats">
+                    <div class="stat-card">
+                        <i class="fas fa-users"></i>
+                        <h3>500+</h3>
+                        <p>Students Reached</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-video"></i>
+                        <h3>50+</h3>
+                        <p>Professional Interviews</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <h3>25+</h3>
+                        <p>Workshops Conducted</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>100+</h3>
+                        <p>College Applications Supported</p>
                     </div>
                 </div>
             </div>
@@ -138,15 +171,17 @@
         </section>
     </main>
 
-    <footer class="footer">
+    <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Quick Links</h3>
-                    <a href="index.html">Home</a>
-                    <a href="about.html">About</a>
-                    <a href="programs.html">Programs</a>
-                    <a href="contact.html">Contact</a>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
                 </div>
                 <div class="footer-section">
                     <h3>Connect With Us</h3>
