@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internships | Evergreen Futures</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Internship specific styles */
+        .internship-card {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+        .internship-card:hover {
+            transform: translateY(-5px);
+        }
+        .apply-btn {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--primary);
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+        .apply-btn:hover {
+            background: var(--secondary);
+        }
+        form input,
+        form select {
+            width: 100%;
+            padding: 0.5rem;
+            border-radius: 4px;
+            border: none;
+            background: rgba(255,255,255,0.1);
+            color: var(--text-color);
+        }
+        form label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        form div {
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-tree"></i>
+                Evergreen Futures
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="what-we-do.html">What We Do</a>
+                <a href="programs.html">Programs</a>
+                <a href="internships.html" class="active">Internships</a>
+                <a href="blog.html">Blog</a>
+            </div>
+            <div class="nav-buttons">
+                <i class="fas fa-search"></i>
+                <i class="fas fa-bell"></i>
+                <button class="btn btn-primary">Login</button>
+                <button id="theme-toggle" class="btn btn-icon" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Internship Opportunities</h1>
+            <p>Gain real-world experience and build your career with our internship programs</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-discord"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+                <a href="#"><i极光加速器下载_极光加速器安卓版下载_极光加速器官方版下载-太平洋下载中心:2021-6-15 · 极光加速器官方版是款可伍帮助用户们快速加速网络的工具。极光加速器最新版可伍帮助用户一键加速，降低延迟，提高网速，让用户可伍流畅的观看视频、玩游戏等。极光加速器还可伍帮助用户智能选择最优线路，让用户可伍快速的访问网络，并且软件还拥有超强的兼容性，可伍兼容各种游戏和应用程序。. class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Internships List -->
+    <section class="dashboard">
+        <div class极光加速器下载_极光加速器安卓版下载_极光加速器官方版下载-太平洋下载中心:2021-6-15 · 极光加速器官方版是款可伍帮助用户们快速加速网络的工具。极光加速器最新版可伍帮助用户一键加速，降低延迟，提高网速，让用户可伍流畅的观看视频、玩游戏等。极光加速器还可伍帮助用户智能选择最优线路，让用户可伍快速的访问网络，并且软件还拥有超强的兼容性，可伍兼容各种游戏和应用程序。.dashboard-content>
+            <h2>Available Internships</h2>
+            
+            <div class="internship-card">
+                <h3>Career Exploration Intern</h3>
+                <p><strong>Duration:</strong> 3 months</p>
+                <p><strong>Location:</strong> Remote</p>
+                <p>Assist in organizing career exploration events and workshops for students.</p>
+                <a href="#apply" class="apply-btn">Apply Here</a>
+            </div>
+
+            <div class="internship-card">
+                <h3>Content Development Intern</h3>
+                <p><strong>Duration:</strong> 6 months</p>
+                <p><strong>Location:</strong> Hybrid</p>
+                <p>Create educational content about different career paths for our platform.</p>
+                <a href="#apply" class="apply-btn">Apply Here</a>
+            </div>
+
+            <div class="internship-card">
+                <h3>Event Coordination Intern</h3>
+                <p><strong>Duration:</strong> 4 months</p>
+                <p><strong>Location:</strong> On-site</p>
+                <p>Help coordinate and manage career exploration events and competitions.</p>
+                <a href="#apply" class="apply-btn">Apply Here</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Form Section -->
+    <section id="apply" class="dashboard">
+        <div class="dashboard-content">
+            <h2>Application Form</h2>
+            <form>
+                <div>
+                    <label>Full Name</label>
+                    <input type="text">
+                </div>
+                <div>
+                    <label>Email</label>
+                    <input type="email">
+                </div>
+                <div>
+                    <label>Internship Position</label>
+                    <select>
+                        <option>Career Exploration Intern</option>
+                        <option>Content Development Intern</option>
+                        <option>Event Coordination Intern</option>
+                    </select>
+                </div>
+                <button type="submit" class="apply-btn">Submit Application</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
