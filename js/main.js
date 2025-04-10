@@ -1,24 +1,28 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize AOS animations
+    AOS.init({
+        duration: 800,
+        once: true
+    });
+
     // Mobile menu toggle
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    const navLinks = document.querySelector('.nav-links');
+    const navMenu = document.querySelector('.nav-menu');
 
-    if (mobileMenuBtn && navLinks) {
-        mobileMenuBtn.addEventListener('click', function() {
-            navLinks.classList.toggle('active');
-            this.classList.toggle('active');
+    if (mobileMenuBtn && navMenu) {
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileMenuBtn.classList.toggle('active');
         });
-    }
 
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', function(event) {
-        if (navLinks && navLinks.classList.contains('active')) {
-            if (!event.target.closest('.nav') && !event.target.closest('.mobile-menu-btn')) {
-                navLinks.classList.remove('active');
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.nav-wrapper')) {
+                navMenu.classList.remove('active');
                 mobileMenuBtn.classList.remove('active');
             }
-        }
-    });
+        });
+    }
 
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -113,4 +117,63 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initial call to set active link
     updateActiveLink();
+
+    // Parallax Effect
+    const parallaxBackground = document.querySelector('.parallax-background');
+    const floatingElements = document.querySelectorAll('.float-item');
+    
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        
+        if (parallaxBackground) {
+            parallaxBackground.style.transform = `translateY(${scrolled * 0.5}px)`;
+        }
+        
+        floatingElements.forEach((element, index) => {
+            const speed = 0.2 + (index * 0.1);
+            element.style.transform = `translateY(${scrolled * speed}px)`;
+        });
+    });
+
+    // Scroll Animation Observer
+    const scrollElements = document.querySelectorAll('[data-scroll]');
+    
+    const elementInView = (el, offset = 0) => {
+        const elementTop = el.getBoundingClientRect().top;
+        return (
+            elementTop <= 
+            (window.innerHeight || document.documentElement.clientHeight) * (1 - offset)
+        );
+    };
+
+    const displayScrollElement = (element) => {
+        element.classList.add('is-visible');
+    };
+
+    const handleScrollAnimation = () => {
+        scrollElements.forEach((el) => {
+            if (elementInView(el, 0.25)) {
+                displayScrollElement(el);
+            }
+        });
+    };
+
+    // Throttle function for better performance
+    let throttleTimer;
+    const throttle = (callback, time) => {
+        if (throttleTimer) return;
+        throttleTimer = true;
+        setTimeout(() => {
+            callback();
+            throttleTimer = false;
+        }, time);
+    };
+
+    // Add scroll event listener
+    window.addEventListener('scroll', () => {
+        throttle(handleScrollAnimation, 250);
+    });
+
+    // Initial check for elements in view
+    handleScrollAnimation();
 }); 

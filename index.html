@@ -3,206 +3,241 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evergreen Futures - Career Exploration for Youth</title>
-    <meta name="description" content="Evergreen Futures empowers children to explore diverse career paths through professional interviews, workshops, events, and educational videos.">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Evergreen Futures</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #2E7D32;
+            --dark-bg: #1a1a1a;
+            --light-text: #ffffff;
+            --nav-height: 80px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: var(--light-text);
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: var(--nav-height);
+            background: rgba(26, 26, 26, 0.8);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 0 2rem;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--light-text);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--light-text);
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .btn {
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background: var(--secondary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--nav-height) 2rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            text-align: center;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* Animated Background */
+        .animated-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .shooting-star {
+            position: absolute;
+            width: 100px;
+            height: 1px;
+            background: linear-gradient(90deg, rgba(255,255,255,0.5), transparent);
+            animation: shooting 3s linear infinite;
+        }
+
+        @keyframes shooting {
+            0% {
+                transform: translateX(-100%) translateY(-100%) rotate(45deg);
+            }
+            100% {
+                transform: translateX(200%) translateY(200%) rotate(45deg);
+            }
+        }
+
+        /* Social Icons */
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .social-icons a {
+            color: var(--light-text);
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: var(--primary-color);
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="container">
-                <a href="#home" class="logo">
-                    <img src="public/images/b4797504-b3ff-4740-87c6-e7dc980fb386.jpeg" alt="Evergreen Futures Logo" class="logo-image">
-                </a>
-                <ul class="nav-links">
-                    <li><a href="#home" class="active">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#programs">Programs</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <i class="fas fa-tree"></i>
+                Evergreen Futures
+            </a>
+            <div class="nav-links">
+                <a href="#dashboard">Dashboard</a>
+                <a href="#programs">Programs</a>
+                <a href="#analysis">Analysis</a>
+                <a href="#opportunities">Opportunities</a>
+                <a href="#internship">Internship</a>
+                <a href="#blog">Blog</a>
+            </div>
+            <div class="nav-buttons">
+                <i class="fas fa-search"></i>
+                <i class="fas fa-bell"></i>
+                <button class="btn btn-primary">Login</button>
+            </div>
             </div>
         </nav>
-    </header>
 
-    <main>
-        <section id="home" class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h1>Inspiring Future Careers</h1>
-                    <p class="lead">Evergreen Futures connects children with professionals through interviews, workshops, events, and videos to help them discover their passion and prepare for college and beyond.</p>
-                    <div class="hero-buttons">
-                        <a href="#programs" class="btn btn-primary">Explore Programs</a>
-                        <a href="#contact" class="btn btn-outline">Get Involved</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <img src="public/images/public speech.jpeg" alt="Students engaged in career exploration workshop">
-                </div>
-            </div>
-        </section>
-
-        <section id="about" class="about">
-            <div class="container">
-                <div class="section-header">
-                    <h2>About Us</h2>
-                    <p>Empowering the next generation through career exploration and mentorship</p>
-                </div>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>Evergreen Futures is dedicated to helping children discover their passion and prepare for their future careers. Through our innovative programs, we connect students with professionals from various fields, providing them with valuable insights and guidance.</p>
-                        <p>Our mission is to inspire and educate young minds by exposing them to diverse career paths and helping them make informed decisions about their future.</p>
-                    </div>
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <i class="fas fa-users"></i>
-                            <h3>1000+</h3>
-                            <p>Students Mentored</p>
-                        </div>
-                        <div class="stat-item">
-                            <i class="fas fa-handshake"></i>
-                            <h3>50+</h3>
-                            <p>Professional Partners</p>
-                        </div>
-                        <div class="stat-item">
-                            <i class="fas fa-graduation-cap"></i>
-                            <h3>100%</h3>
-                            <p>College Preparation</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="programs" class="programs">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Our Programs</h2>
-                    <p>Discover our initiatives designed to inspire and educate the next generation</p>
-                </div>
-                <div class="programs-grid">
-                    <div class="program-card">
-                        <div class="program-image">
-                            <img src="public/images/download.jpeg" alt="Career Interview Series">
-                        </div>
-                        <div class="program-content">
-                            <h3>Career Interview Series</h3>
-                            <p>Weekly recorded interviews with professionals from diverse fields, sharing their career journey, challenges, and advice for young people.</p>
-                            <div class="program-details">
-                                <span class="category"><i class="fas fa-tag"></i> Video Series</span>
-                                <span class="date"><i class="fas fa-calendar"></i> Weekly</span>
-                            </div>
-                            <a href="#contact" class="btn btn-primary">Join Now</a>
-                        </div>
-                    </div>
-
-                    <div class="program-card">
-                        <div class="program-image">
-                            <img src="public/images/download.jpeg" alt="Career Exploration Workshop">
-                        </div>
-                        <div class="program-content">
-                            <h3>Career Exploration Workshop</h3>
-                            <p>Interactive sessions where students explore various career paths through hands-on activities and industry expert talks.</p>
-                            <div class="program-details">
-                                <span class="category"><i class="fas fa-tag"></i> Workshop</span>
-                                <span class="date"><i class="fas fa-calendar"></i> Monthly</span>
-                            </div>
-                            <a href="#contact" class="btn btn-primary">Join Now</a>
-                        </div>
-                    </div>
-
-                    <div class="program-card">
-                        <div class="program-image">
-                            <img src="public/images/download.jpeg" alt="College Preparation Program">
-                        </div>
-                        <div class="program-content">
-                            <h3>College Preparation Program</h3>
-                            <p>Guidance on college selection, applications, and preparation for higher education, including virtual campus tours and admissions advice.</p>
-                            <div class="program-details">
-                                <span class="category"><i class="fas fa-tag"></i> Education</span>
-                                <span class="date"><i class="fas fa-calendar"></i> Quarterly</span>
-                            </div>
-                            <a href="#contact" class="btn btn-primary">Join Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="contact">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Get in Touch</h2>
-                    <p>Join us in our mission to inspire the next generation</p>
-                </div>
-                <div class="contact-content">
-                    <div class="contact-form">
-                        <form>
-                            <div class="form-group">
-                                <label for="name">Name</label>
-                                <input type="text" id="name" name="name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Message</label>
-                                <textarea id="message" name="message" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Send Message</button>
-                        </form>
-                    </div>
-                    <div class="contact-info">
-                        <div class="info-item">
-                            <i class="fas fa-envelope"></i>
-                            <h3>Email</h3>
-                            <p>info@evergreenfutures.org</p>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-phone"></i>
-                            <h3>Phone</h3>
-                            <p>+1 (555) 123-4567</p>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <h3>Location</h3>
-                            <p>San Jose, California</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#programs">Programs</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Connect With Us</h3>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Evergreen Futures. All rights reserved.</p>
-            </div>
+    <!-- Hero Section -->
+        <section class="hero">
+        <div class="animated-bg">
+            <!-- Shooting stars will be added by JavaScript -->
         </div>
-    </footer>
+                <div class="hero-content">
+            <h1>Empowering Youth Through<br>Career Discovery</h1>
+            <p>Connect with mentors, discover opportunities, and shape your future with Evergreen Futures</p>
+            <button class="btn btn-primary">Get Started</button>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-discord"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </section>
 
-    <script src="js/main.js"></script>
+    <!-- JavaScript for animated background -->
+    <script>
+        function createShootingStars() {
+            const bg = document.querySelector('.animated-bg');
+            const numberOfStars = 20;
+
+            for (let i = 0; i < numberOfStars; i++) {
+                const star = document.createElement('div');
+                star.className = 'shooting-star';
+                star.style.top = `${Math.random() * 100}%`;
+                star.style.left = `${Math.random() * 100}%`;
+                star.style.animationDelay = `${Math.random() * 3}s`;
+                bg.appendChild(star);
+            }
+        }
+
+        // Create initial stars
+        createShootingStars();
+    </script>
 </body>
 </html> 
