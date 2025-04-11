@@ -1,87 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evergreen Futures</title>
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Evergreen Futures</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- AOS Animation Library -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#" class="logo">
-                <i class="fas fa-tree"></i>
-                Evergreen Futures
-            </a>
-            <div class="nav-links">
-                <a href="index.html" class="active">Home</a>
-                <a href="what-we-do.html">What We Do</a>
-                <a href="programs.html">Programs</a>
-                <a href="internships.html">Internships</a>
-                <a href="blog.html">Blog</a>
-            </div>
-            <div class="nav-buttons">
-                <i class="fas fa-search"></i>
-                <i class="fas fa-bell"></i>
-                <button class="btn btn-primary">Login</button>
-                <i id="theme-toggle" class="fas fa-moon" style="cursor: pointer; font-size: 1.2rem;"></i>
-            </div>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="animated-bg">
-            <!-- Shooting stars will be added by JavaScript -->
-        </div>
-        <div class="hero-content">
-            <h1>Empowering Youth Through<br>Career Discovery</h1>
-            <p>Connect with mentors, discover opportunities, and shape your future with Evergreen Futures</p>
-            <button class="btn btn-primary">Get Started</button>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-discord"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-tikt极光加速器下载_极光加速器安卓版下载_极光加速器官方版下载-太平洋下载中心:2021-6-15 · 极光加速器官方版是款可伍帮助用户们快速加速网络的工具。极光加速器最新版可伍帮助用户一键加速，降低延迟，提高网速，让用户可伍流畅的观看视频、玩游戏等。极光加速器还可伍帮助用户智能选择最优线路，让用户可伍快速的访问网络，并且软件还拥有超强的兼容性，可伍兼容各种游戏和应用程序。.ok"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-            </div>
-        </div>
-        <div class="scroll-indicator" onclick="scrollToSection('dashboard')">
-            <span>Scroll Down</span>
-            <i class="fas fa-chevron-down"></i>
-        </div>
-    </section>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#home" class="logo">
+        <i class="fas fa-tree"></i>
+        Evergreen Futures
+      </a>
+      <div class="nav-links">
+        <a href="#home" class="active">Home</a>
+        <a href="#what-we-do">What We Do</a>
+        <a href="#programs">Programs</a>
+        <a href="#join-our-team">Join Our Team</a>
+        <a href="#blog">Blog</a>
+      </div>
+      <div class="nav-buttons">
+        <i class="fas fa-search"></i>
+        <i class="fas fa-bell"></i>
+        <i id="theme-toggle" class="fas fa-moon"></i>
+      </div>
+    </div>
+  </nav>
 
-    <!-- Dashboard Section -->
-    <section id="dashboard" class="dashboard">
-        <div class="dashboard-content">
-            <h2>Dashboard</h2>
-            <div class="dashboard-grid">
-                <div class="dashboard-card">
-                    <h3>Programs</h3>
-                    <p>View and manage your enrolled programs</p>
-                </div>
-                <div class="dashboard-card">
-                    <h3>Analysis</h3>
-                    <p>Track your progress and achievements</p>
-                </div>
-                <div class="dashboard-card">
-                    <h3>Opportunities</h3>
-                    <p>Discover new career opportunities</p>
-                </div>
-                <div class="dashboard-card">
-                    <h3>Internship</h3>
-                    <p>Find and apply for internships</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="animated-bg"></div>
+    <div class="hero-content">
+      <h1>Empowering Youth Through<br>Career Discovery</h1>
+      <p>Connect with mentors, discover opportunities, and shape your future with Evergreen Futures</p>
+      <button class="btn btn-primary">Get Started</button>
+      <div class="social-icons">
+        <a href="https://discord.gg/VKufnC6K" target="_blank" rel="noopener noreferrer"><i class="fab fa-discord"></i></a>
+        <a href="https://www.linkedin.com/company/evergreen-futures/about/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/evergreenfutures/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@evergreenfutures" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.youtube.com/c/evergreenfutures" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>Scroll Down</span>
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </section>
 
-    <!-- JavaScript -->
-    <script src="js/main.js"></script>
+  <!-- What We Do Section -->
+  <section id="what-we-do" class="dashboard">
+    <div class="dashboard-content">
+      <h2 class="animate-on-scroll">What We Do</h2>
+      <p class="animate-on-scroll">We connect students with mentors, learning paths, and hands-on experiences to shape their careers early.</p>
+      
+      <div class="dashboard-grid">
+        <div class="dashboard-card animate-on-scroll" data-aos="fade-up" data-aos-delay="100">
+          <i class="fas fa-users fa-2x" style="color: #2E8B57; margin-bottom: 1rem;"></i>
+          <h3>Mentorship</h3>
+          <p>Connect with industry professionals who guide you through career exploration</p>
+        </div>
+        <div class="dashboard-card animate-on-scroll" data-aos="fade-up" data-aos-delay="200">
+          <i class="fas fa-lightbulb fa-2x" style="color: #2E8B57; margin-bottom: 1rem;"></i>
+          <h3>Skill Building</h3>
+          <p>Develop essential skills through hands-on projects and guided learning</p>
+        </div>
+        <div class="dashboard-card animate-on-scroll" data-aos="fade-up" data-aos-delay="300">
+          <i class="fas fa-briefcase fa-2x" style="color: #2E8B57; margin-bottom: 1rem;"></i>
+          <h3>Career Pathways</h3>
+          <p>Explore diverse career options and find the path that matches your interests</p>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- Programs Section -->
+  <section id="programs" class="dashboard">
+    <div class="dashboard-content">
+      <h2 class="animate-on-scroll">Programs</h2>
+      <p class="animate-on-scroll">Explore and enroll in career-exploration and skills-building programs designed for youth.</p>
+      
+      <div class="dashboard-grid">
+        <div class="dashboard-card animate-on-scroll" data-aos="fade-right" data-aos-delay="100">
+          <i class="fas fa-code fa-2x" style="color: #2E8B57; margin-bottom: 1rem;"></i>
+          <h3>Tech Explorers</h3>
+          <p>Discover the world of technology through coding, design, and digital creation</p>
+          <a href="#" class="btn btn-secondary" style="margin-top: 1.5rem;">Learn More</a>
+        </div>
+        <div class="dashboard-card animate-on-scroll" data-aos="fade-up" data-aos-delay="200">
+          <i class="fas fa-leaf fa-2x" style="color: #2E8B57; margin-bottom: 1rem;"></i>
+          <h3>Green Innovators</h3>
+          <p>Explore careers in sustainability, conservation, and environmental science</p>
+          <a href="#" class="btn btn-secondary" style="margin-top: 1.5rem;">Learn More</a>
+        </div>
+        <div class="dashboard-card animate-on-scroll" data-aos="fade-left" data-aos-delay="300">
+          <i class="fas fa-heartbeat fa-2x" style="color: #2E8B57; margin-bottom: 1rem;"></i>
+          <h3>Health Pathways</h3>
+          <p>Discover careers in healthcare, wellness, and medical innovation</p>
+          <a href="#" class="btn btn-secondary" style="margin-top: 1.5rem;">Learn More</a>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- Join Our Team Section -->
+  <section id="join-our-team" class="dashboard">
+    <div class="dashboard-content">
+      <h2 class="animate-on-scroll">Join Our Team</h2>
+      <p class="animate-on-scroll">Become part of our mission to empower youth through various roles and opportunities.</p>
+      
+      <div class="dashboard-grid">
+        <div class="dashboard-card animate-on-scroll" data-aos="zoom-in" data-aos-delay="100">
+          <i class="fas fa-hands-helping fa-2x" style="color: #2E8B57; margin-bottom: 1rem;"></i>
+          <h3>Volunteering Opportunities</h3>
+          <p>Make a difference by sharing your time and skills with our community</p>
+          <a href="https://forms.gle/volunteering-signup" target="_blank" class="btn btn-secondary" style="margin-top: 1.5rem;">Apply Now</a>
+        </div>
+        <div class="dashboard-card animate-on-scroll" data-aos="zoom-in" data-aos-delay="200">
+          <i class="fas fa-users-cog fa-2x" style="color: #2E8B57; margin-bottom: 1rem;"></i>
+          <h3>Board Positions</h3>
+          <p>Join our leadership team and help shape the future of our organization</p>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScfVqG3BzF90dp2MjikNnSPrG9apcV9BOzmtrNbltLg_KpVlQ/viewform?usp=dialog" target="_blank" class="btn btn-secondary" style="margin-top: 1.5rem;">View Positions</a>
+        </div>
+        <div class="dashboard-card animate-on-scroll" data-aos="zoom-in" data-aos-delay="300">
+          <i class="fas fa-microphone fa-2x" style="color: #2E8B57; margin-bottom: 1rem;"></i>
+          <h3>Join Our Podcast</h3>
+          <p>Share your story and insights as a guest on our career exploration podcast</p>
+          <a href="https://forms.gle/podcast-application" target="_blank" class="btn btn-secondary" style="margin-top: 1.5rem;">Apply as Guest</a>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section id="blog" class="dashboard">
+    <div class="dashboard-content">
+      <h2 class="animate-on-scroll">Blog</h2>
+      <p class="animate-on-scroll">Read stories, career tips, and advice from mentors, professionals, and other students.</p>
+      
+      <div class="dashboard-grid">
+        <div class="dashboard-card animate-on-scroll" data-aos="flip-left" data-aos-delay="100">
+          <div style="height: 150px; background: linear-gradient(45deg, #2E8B57, #3CB371); border-radius: 8px; margin-bottom: 1.5rem;"></div>
+          <h3>Finding Your Career Path</h3>
+          <p>Tips and strategies for discovering what career is right for you</p>
+          <a href="#" class="btn btn-secondary" style="margin-top: 1.5rem;">Read More</a>
+        </div>
+        <div class="dashboard-card animate-on-scroll" data-aos="flip-up" data-aos-delay="200">
+          <div style="height: 150px; background: linear-gradient(45deg, #2E8B57, #3CB371); border-radius: 8px; margin-bottom: 1.5rem;"></div>
+          <h3>Success Stories</h3>
+          <p>Inspiring stories from students who found their passion through our programs</p>
+          <a href="#" class="btn btn-secondary" style="margin-top: 1.5rem;">Read More</a>
+        </div>
+        <div class="dashboard-card animate-on-scroll" data-aos="flip-right" data-aos-delay="300">
+          <div style="height: 150px; background: linear-gradient(45deg, #2E8B57, #3CB371); border-radius: 8px; margin-bottom: 1.5rem;"></div>
+          <h3>Industry Insights</h3>
+          <p>The latest trends and developments across various career fields</p>
+          <a href="#" class="btn btn-secondary" style="margin-top: 1.5rem;">Read More</a>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer style="background-color: #121212; color: white; padding: 3rem 2rem; text-align: center;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 2rem; margin-bottom: 2rem;">
+        <div>
+          <h3 style="margin-bottom: 1rem; color: #2E8B57;">Evergreen Futures</h3>
+          <p style="max-width: 300px; color: #aaa;">Empowering youth through career discovery and mentorship.</p>
+        </div>
+        <div>
+          <h4 style="margin-bottom: 1rem; color: #2E8B57;">Quick Links</h4>
+          <ul style="list-style: none; padding: 0;">
+            <li style="margin-bottom: 0.5rem;"><a href="#home" style="color: #aaa; text-decoration: none;">Home</a></li>
+            <li style="margin-bottom: 0.5rem;"><a href="#what-we-do" style="color: #aaa; text-decoration: none;">What We Do</a></li>
+            <li style="margin-bottom: 0.5rem;"><a href="#programs" style="color: #aaa; text-decoration: none;">Programs</a></li>
+            <li style="margin-bottom: 0.5rem;"><a href="#join-our-team" style="color: #aaa; text-decoration: none;">Join Our Team</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="margin-bottom: 1rem; color: #2E8B57;">Contact</h4>
+          <p style="color: #aaa;">evergreenfuturesfoundation@gmail.com</p>
+          <p style="color: #aaa;">+1 (555) 123-4567</p>
+        </div>
+        <div>
+          <h4 style="margin-bottom: 1rem; color: #2E8B57;">Follow Us</h4>
+          <div style="display: flex; gap: 1rem;">
+            <a href="https://www.instagram.com/evergreenfutures" target="_blank" rel="noopener noreferrer" style="color: #aaa; font-size: 1.5rem;"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/evergreenfutures" target="_blank" rel="noopener noreferrer" style="color: #aaa; font-size: 1.5rem;"><i class="fab fa-linkedin"></i></a>
+            <a href="https://twitter.com/evergreenftrs" target="_blank" rel="noopener noreferrer" style="color: #aaa; font-size: 1.5rem;"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.youtube.com/c/evergreenfutures" target="_blank" rel="noopener noreferrer" style="color: #aaa; font-size: 1.5rem;"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div style="border-top: 1px solid #333; padding-top: 1.5rem;">
+        <p style="color: #aaa;">&copy; 2024 Evergreen Futures. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS Libraries -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <!-- Custom JS -->
+  <script src="js/main.js"></script>
+  <script>
+    // Initialize AOS animation library
+    document.addEventListener('DOMContentLoaded', function() {
+      AOS.init({
+        duration: 800,
+        easing: 'ease',
+        once: true
+      });
+    });
+  </script>
 </body>
 </html>
