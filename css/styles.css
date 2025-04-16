@@ -99,7 +99,7 @@ html {
 
 .logo i {
     margin-right: 0.5rem;
-    color: #2E8B57; /* Sea Green */ /* Sea Green */
+    color: #2E8B57; /* Sea Green */
 }
 
 .nav-links {
@@ -123,12 +123,12 @@ html {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: #2E8B57; /* Sea Green */ /* Sea Green */
+    background-color: #2E8B57; /* Sea Green */
     transition: width 0.3s ease;
 }
 
 .nav-links a:hover::after {
-    width: 12E8B57; /* Sea Green */
+    width: 100%;
 }
 
 .nav-links a.active {
@@ -147,7 +147,7 @@ html {
 
 .nav-buttons i,
 .nav-buttons .btn {
-    cursor: 2E8B57; /* Sea Green */
+    cursor: pointer;
     transition: all 0.3s ease;
 }
 
@@ -225,20 +225,20 @@ html {
     padding: 1rem 2.5rem;
     font-size: 1.1rem;
     border-radius: 50px;
-    background-color: #2E8B57; /* Sea Green */ /* Sea Green */
+    background-color: #2E8B57; /* Sea Green */
     color: white;
     border: none;
     cursor: pointer;
-    box-shadow: 0 4px 15px rgba(46, 139, 87 0.4);
+    box-shadow: 0 4px 15px rgba(46, 139, 87, 0.4);
     animation: fadeIn 1s ease-out 0.6s;
     animation-fill-mode: both;
     transition: all 0.3s ease;
 }
 
 .hero .btn:hover {
-    background-color: #1D6E45; /* Darker Sea Green */ /* Darker Sea Green */
+    background-color: #1D6E45; /* Darker Sea Green */
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(46, 139, 87 0.6);
+    box-shadow: 0 6px 20px rgba(46, 139, 87, 0.6);
 }
 
 .social-icons {
@@ -404,7 +404,7 @@ section:nth-child(odd) {
     width: 100%;
     height: 5px;
     background: linear-gradient(90deg, #2E8B57, #3CB371); /* Sea Green to Medium Sea Green */
-    z-index: 2E8B57; /* Sea Green */
+    z-index: 2;
 }
 
 .dashboard-card:hover {
@@ -439,15 +439,15 @@ section:nth-child(odd) {
 
 .btn-primary {
     background-color: #2E8B57; /* Sea Green */
-    color: 2E8B57; /* Sea Green */
+    color: white;
     border: none;
-    box-shadow: 0 4px 15px rgba(46, 139, 87 0.3);
+    box-shadow: 0 4px 15px rgba(46, 139, 87, 0.3);
 }
 
 .btn-primary:hover {
     background-color: #1D6E45; /* Darker Sea Green */
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(46, 139, 87 0.5);
+    box-shadow: 0 6px 20px rgba(46, 139, 87, 0.5);
 }
 
 .btn-secondary {
