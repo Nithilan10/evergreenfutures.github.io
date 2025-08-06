@@ -1,1130 +1,472 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Evergreen Futures - Empowering Youth Through Real Stories</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <!-- AOS Animation Library -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <!-- Custom CSS -->
-  <style>
-    :root {
-      --primary-color: #4CAF50;
-      --secondary-color: #2E7D32;
-      --accent-color: #FFC107;
-      --accent-color-2: #FF5722;
-      --accent-color-3: #2196F3;
-      --dark-bg: #1a1a1a;
-      --light-text: #ffffff;
-      --nav-height: 80px;
-      --section-padding: 5rem 2rem;
-      --container-width: 1200px;
-      --border-radius: 16px;
-      --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    }
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="public/images/Logo.jpeg" type="image/x-icon">
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    }
+    <!--=============== REMIXICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
 
-    html {
-      scroll-behavior: smooth;
-    }
+    <!--=============== GOOGLE FONTS ===============-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    body {
-      background-color: var(--dark-bg);
-      color: var(--light-text);
-      line-height: 1.6;
-    }
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="css/styles.css?v=4.0">
 
-    .container {
-      max-width: var(--container-width);
-      margin: 0 auto;
-      padding: 0 2rem;
-    }
-
-    section {
-      padding: var(--section-padding);
-      position: relative;
-    }
-
-    /* Navigation Bar */
-    .navbar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: var(--nav-height);
-      background: rgba(26, 26, 26, 0.95);
-      backdrop-filter: blur(10px);
-      z-index: 1000;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .nav-container {
-      max-width: var(--container-width);
-      margin: 0 auto;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 2rem;
-    }
-
-    .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: var(--light-text);
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-family: 'Quicksand', sans-serif;
-    }
-
-    .logo i {
-      color: var(--accent-color);
-      font-size: 1.8rem;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      align-items: center;
-    }
-
-    .nav-links a {
-      color: var(--light-text);
-      text-decoration: none;
-      font-size: 1rem;
-      transition: all 0.3s ease;
-      position: relative;
-      font-weight: 500;
-    }
-
-    .nav-links a::after {
-      content: '';
-      position: absolute;
-      bottom: -5px;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: var(--primary-color);
-      transition: width 0.3s ease;
-    }
-
-    .nav-links a:hover::after {
-      width: 100%;
-    }
-
-    .nav-buttons {
-      display: flex;
-      gap: 1rem;
-      align-items: center;
-    }
-
-    .btn {
-      padding: 0.75rem 1.5rem;
-      border-radius: 50px;
-      font-weight: 500;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.95rem;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    }
-
-    .btn-primary {
-      background: linear-gradient(45deg, var(--primary-color), var(--accent-color-3));
-      color: white;
-      border: none;
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 7px 20px rgba(0, 0, 0, 0.2);
-    }
-
-    .btn-outline {
-      border: 2px solid var(--primary-color);
-      color: var(--primary-color);
-      background: transparent;
-    }
-
-    .btn-outline:hover {
-      background: var(--primary-color);
-      color: white;
-      transform: translateY(-3px);
-    }
-
-    /* Hero Section */
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      overflow: hidden;
-      background: linear-gradient(135deg, var(--dark-bg) 0%, #2a2a2a 100%);
-      padding-top: var(--nav-height);
-    }
-
-    .hero-content {
-      max-width: var(--container-width);
-      text-align: center;
-      z-index: 1;
-      padding: 0 2rem;
-    }
-
-    .hero h1 {
-      font-size: 3.5rem;
-      margin-bottom: 1.5rem;
-      line-height: 1.2;
-      background: linear-gradient(45deg, var(--primary-color), var(--accent-color), var(--accent-color-3));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      font-weight: 700;
-      font-family: 'Quicksand', sans-serif;
-      animation: gradient-shift 8s ease infinite;
-    }
-
-    @keyframes gradient-shift {
-      0% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0% 50%;
-      }
-    }
-
-    .hero p {
-      font-size: 1.25rem;
-      margin-bottom: 2rem;
-      color: rgba(255, 255, 255, 0.8);
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-      font-weight: 400;
-    }
-
-    /* Mission Section */
-    .mission {
-      background: linear-gradient(45deg, var(--dark-bg), #2a2a2a);
-      padding: var(--section-padding);
-    }
-
-    .mission-content {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: center;
-    }
-
-    .mission-text h2 {
-      font-size: 2.5rem;
-      margin-bottom: 1.5rem;
-      background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      font-weight: 700;
-      font-family: 'Quicksand', sans-serif;
-    }
-
-    .mission-text p {
-      font-size: 1.1rem;
-      margin-bottom: 1.5rem;
-      color: rgba(255, 255, 255, 0.8);
-    }
-
-    .mission-stats {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
-    }
-
-    .stat-card {
-      background: rgba(255, 255, 255, 0.05);
-      padding: 1.5rem;
-      border-radius: var(--border-radius);
-      text-align: center;
-      transition: transform 0.3s ease;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      box-shadow: var(--card-shadow);
-    }
-
-    .stat-card:hover {
-      transform: translateY(-5px) scale(1.03);
-      border-color: var(--primary-color);
-    }
-
-    .stat-card h3 {
-      font-size: 2.5rem;
-      color: var(--primary-color);
-      margin-bottom: 0.5rem;
-      font-weight: 700;
-      font-family: 'Quicksand', sans-serif;
-    }
-
-    .stat-card p {
-      color: rgba(255, 255, 255, 0.8);
-      font-size: 0.95rem;
-    }
-
-    /* Featured Interviews Section */
-    .featured-interviews {
-      background: linear-gradient(135deg, var(--dark-bg) 0%, #2a2a2a 100%);
-      padding: var(--section-padding);
-    }
-
-    .section-header {
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-
-    .section-header h2 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      font-weight: 700;
-      font-family: 'Quicksand', sans-serif;
-    }
-
-    .section-header p {
-      color: rgba(255, 255, 255, 0.8);
-      max-width: 600px;
-      margin: 0 auto;
-      font-size: 1.1rem;
-    }
-
-    .interviews-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-
-    .interview-card {
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: var(--border-radius);
-      overflow: hidden;
-      transition: all 0.3s ease;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      box-shadow: var(--card-shadow);
-    }
-
-    .interview-card:hover {
-      transform: translateY(-10px) scale(1.02);
-      border-color: var(--primary-color);
-    }
-
-    .interview-image {
-      width: 100%;
-      height: 200px;
-      background: linear-gradient(45deg, var(--primary-color), var(--accent-color-3));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 3rem;
-      color: white;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .interview-image::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 L0,100 Z" fill="rgba(255,255,255,0.1)"/></svg>');
-      background-size: cover;
-      opacity: 0.5;
-    }
-
-    .interview-content {
-      padding: 1.5rem;
-      flex-grow: 1;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .interview-content h3 {
-      color: var(--primary-color);
-      margin-bottom: 0.5rem;
-      font-weight: 600;
-      font-family: 'Quicksand', sans-serif;
-    }
-
-    .interview-content p {
-      color: rgba(255, 255, 255, 0.8);
-      margin-bottom: 1.5rem;
-      flex-grow: 1;
-    }
-
-    .interview-content .btn {
-      align-self: flex-start;
-    }
-
-    /* Impact Section */
-    .impact {
-      background: linear-gradient(45deg, var(--dark-bg), #2a2a2a);
-      padding: var(--section-padding);
-    }
-
-    .impact-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-
-    .impact-card {
-      background: rgba(255, 255, 255, 0.05);
-      padding: 2rem;
-      border-radius: var(--border-radius);
-      text-align: center;
-      transition: all 0.3s ease;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      box-shadow: var(--card-shadow);
-    }
-
-    .impact-card:hover {
-      transform: translateY(-5px) scale(1.03);
-      border-color: var(--primary-color);
-    }
-
-    .impact-card i {
-      font-size: 2.5rem;
-      color: var(--primary-color);
-      margin-bottom: 1rem;
-      background: linear-gradient(45deg, var(--primary-color), var(--accent-color-3));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .impact-card h3 {
-      color: var(--light-text);
-      margin-bottom: 0.5rem;
-      font-weight: 600;
-      font-family: 'Quicksand', sans-serif;
-    }
-
-    .impact-card p {
-      color: rgba(255, 255, 255, 0.8);
-    }
-
-    /* Testimonials Section */
-    .testimonials {
-      background: linear-gradient(135deg, var(--dark-bg) 0%, #2a2a2a 100%);
-      padding: var(--section-padding);
-    }
-
-    .testimonials-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-
-    .testimonial-card {
-      background: rgba(255, 255, 255, 0.05);
-      padding: 2rem;
-      border-radius: var(--border-radius);
-      position: relative;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      box-shadow: var(--card-shadow);
-      transition: all 0.3s ease;
-    }
-
-    .testimonial-card:hover {
-      transform: translateY(-5px);
-      border-color: var(--primary-color);
-    }
-
-    .testimonial-card::before {
-      content: '"';
-      position: absolute;
-      top: 1rem;
-      left: 1.5rem;
-      font-size: 4rem;
-      color: var(--primary-color);
-      opacity: 0.3;
-      font-family: serif;
-    }
-
-    .testimonial-card p {
-      color: rgba(255, 255, 255, 0.8);
-      margin-bottom: 1.5rem;
-      font-style: italic;
-      position: relative;
-      z-index: 1;
-    }
-
-    .testimonial-author {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-
-    .testimonial-author img {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 2px solid var(--primary-color);
-    }
-
-    .testimonial-author-info h4 {
-      color: var(--light-text);
-      margin-bottom: 0.25rem;
-      font-weight: 600;
-      font-family: 'Quicksand', sans-serif;
-    }
-
-    .testimonial-author-info p {
-      color: rgba(255, 255, 255, 0.6);
-      font-size: 0.9rem;
-      margin-bottom: 0;
-    }
-
-    /* Contact Section */
-    .contact {
-      background: linear-gradient(45deg, var(--dark-bg), #2a2a2a);
-      padding: var(--section-padding);
-    }
-
-    .contact-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: center;
-    }
-
-    .contact-info h3 {
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
-      color: var(--light-text);
-      font-weight: 700;
-      font-family: 'Quicksand', sans-serif;
-    }
-
-    .contact-info p {
-      color: rgba(255, 255, 255, 0.8);
-      margin-bottom: 2rem;
-      font-size: 1.1rem;
-    }
-
-    .contact-details {
-      display: grid;
-      gap: 1.5rem;
-    }
-
-    .contact-detail {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      background: rgba(255, 255, 255, 0.05);
-      padding: 1rem;
-      border-radius: var(--border-radius);
-      transition: all 0.3s ease;
-    }
-
-    .contact-detail:hover {
-      transform: translateX(5px);
-      background: rgba(255, 255, 255, 0.1);
-    }
-
-    .contact-detail i {
-      font-size: 1.5rem;
-      color: var(--primary-color);
-    }
-
-    .contact-detail p {
-      margin-bottom: 0;
-    }
-
-    .contact-form {
-      background: rgba(255, 255, 255, 0.05);
-      padding: 2rem;
-      border-radius: var(--border-radius);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      box-shadow: var(--card-shadow);
-    }
-
-    .form-group {
-      margin-bottom: 1.5rem;
-    }
-
-    .form-group label {
-      display: block;
-      margin-bottom: 0.5rem;
-      color: var(--light-text);
-      font-weight: 500;
-    }
-
-    .form-group input,
-    .form-group textarea {
-      width: 100%;
-      padding: 0.75rem;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 8px;
-      background: rgba(255, 255, 255, 0.05);
-      color: var(--light-text);
-      transition: all 0.3s ease;
-    }
-
-    .form-group input:focus,
-    .form-group textarea:focus {
-      outline: none;
-      border-color: var(--primary-color);
-      box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
-    }
-
-    /* Footer */
-    .footer {
-      background: rgba(0, 0, 0, 0.3);
-      padding: 4rem 2rem 2rem;
-    }
-
-    .footer-content {
-      max-width: var(--container-width);
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-    }
-
-    .footer-section h3 {
-      color: var(--primary-color);
-      margin-bottom: 1rem;
-      font-weight: 600;
-      font-family: 'Quicksand', sans-serif;
-    }
-
-    .footer-section p {
-      color: rgba(255, 255, 255, 0.8);
-      margin-bottom: 1rem;
-    }
-
-    .footer-section ul {
-      list-style: none;
-    }
-
-    .footer-section ul li {
-      margin-bottom: 0.5rem;
-    }
-
-    .footer-section ul li a {
-      color: rgba(255, 255, 255, 0.8);
-      text-decoration: none;
-      transition: all 0.3s ease;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .footer-section ul li a:hover {
-      color: var(--primary-color);
-      transform: translateX(5px);
-    }
-
-    .footer-section ul li a::before {
-      content: '→';
-      opacity: 0;
-      transition: all 0.3s ease;
-    }
-
-    .footer-section ul li a:hover::before {
-      opacity: 1;
-    }
-
-    .footer-bottom {
-      text-align: center;
-      padding-top: 2rem;
-      margin-top: 2rem;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      color: rgba(255, 255, 255, 0.6);
-    }
-
-    /* Social Icons */
-    .social-icons {
-      display: flex;
-      gap: 1rem;
-      margin-top: 1rem;
-      justify-content: center;
-    }
-
-    .social-icons a {
-      color: var(--light-text);
-      font-size: 1.5rem;
-      transition: all 0.3s ease;
-      width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.05);
-    }
-
-    .social-icons a:hover {
-      color: var(--primary-color);
-      transform: translateY(-5px);
-      background: rgba(255, 255, 255, 0.1);
-    }
-
-    /* Responsive Design */
-    @media (max-width: 992px) {
-      .mission-content,
-      .contact-container {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-      }
-
-      .hero h1 {
-        font-size: 2.8rem;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-      }
-
-      .hero h1 {
-        font-size: 2.2rem;
-      }
-
-      .section-header h2 {
-        font-size: 2rem;
-      }
-    }
-
-    /* Scroll Indicator */
-    .scroll-indicator {
-      position: absolute;
-      bottom: 2rem;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 0.5rem;
-      cursor: pointer;
-      transition: opacity 0.3s ease;
-    }
-
-    .scroll-indicator:hover {
-      opacity: 0.8;
-    }
-
-    .scroll-indicator span {
-      font-size: 0.875rem;
-      color: rgba(255, 255, 255, 0.8);
-    }
-
-    .scroll-indicator i {
-      font-size: 1.5rem;
-      animation: bounce 2s infinite;
-    }
-
-    @keyframes bounce {
-      0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-      }
-      40% {
-        transform: translateY(-10px);
-      }
-      60% {
-        transform: translateY(-5px);
-      }
-    }
-
-    /* Animated Background */
-    .animated-bg {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      overflow: hidden;
-      z-index: 0;
-    }
-
-    .shooting-star {
-      position: absolute;
-      width: 100px;
-      height: 1px;
-      background: linear-gradient(90deg, rgba(255,255,255,0.5), transparent);
-      animation: shooting 3s linear infinite;
-    }
-
-    @keyframes shooting {
-      0% {
-        transform: translateX(-100%) translateY(-100%) rotate(45deg);
-      }
-      100% {
-        transform: translateX(200%) translateY(200%) rotate(45deg);
-      }
-    }
-
-    /* Floating Elements */
-    .floating-element {
-      position: absolute;
-      border-radius: 50%;
-      background: linear-gradient(45deg, var(--primary-color), var(--accent-color-3));
-      opacity: 0.1;
-      animation: float 15s ease-in-out infinite;
-    }
-
-    @keyframes float {
-      0%, 100% {
-        transform: translateY(0) rotate(0deg);
-      }
-      50% {
-        transform: translateY(-20px) rotate(10deg);
-      }
-    }
-
-    /* Emoji Decorations */
-    .emoji-decoration {
-      position: absolute;
-      font-size: 2rem;
-      opacity: 0.2;
-      animation: spin 20s linear infinite;
-    }
-
-    @keyframes spin {
-      0% {
-        transform: rotate(0deg);
-      }
-      100% {
-        transform: rotate(360deg);
-      }
-    }
-  </style>
+    <title>Evergreen Futures - Empowering Youth Through Career Discovery</title>
+      
 </head>
 <body>
+    <!--==================== PROMO BANNER ====================-->
+    <div class="promo-banner">
+        <a href="#programs" class="animated-anchor-link">
+            <span id="typing-text"></span>
+        </a>
+    </div>
 
-  <!-- Navigation Bar -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <a href="#" class="logo">
-        <i class="fas fa-tree"></i>
-        Evergreen Futures
-      </a>
-      <div class="nav-links">
-        <a href="#mission">Our Mission</a>
-        <a href="#featured">Interviews</a>
-        <a href="#impact">Impact</a>
-        <a href="#contact">Contact</a>
-      </div>
-      <div class="nav-buttons">
-        <a href="#contact" class="btn btn-outline">Share Your Story</a>
-        <a href="#featured" class="btn btn-primary">Watch Interviews</a>
-      </div>
-    </div>
-  </nav>
+    <script>
+    const textArray = [
+        "🌟 Join us in empowering the next generation! Discover our career programs and workshops. Click here to explore ➜"
+    ];
+    let textIndex = 0;
+    let charIndex = 0;
+    let typingSpeed = 40; // Speed of typing
+    let erasingSpeed = 40; // Speed of erasing
+    let delayBetweenTexts = 3000; // Delay before typing new text
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="animated-bg">
-      <!-- Shooting stars will be added by JavaScript -->
-    </div>
-    <!-- Floating elements for younger audience -->
-    <div class="floating-element" style="width: 100px; height: 100px; top: 10%; left: 10%;"></div>
-    <div class="floating-element" style="width: 150px; height: 150px; top: 70%; right: 15%;"></div>
-    <div class="floating-element" style="width: 80px; height: 80px; top: 30%; right: 25%;"></div>
-    <div class="emoji-decoration" style="top: 20%; left: 5%;">🚀</div>
-    <div class="emoji-decoration" style="top: 60%; right: 10%;">💡</div>
-    <div class="emoji-decoration" style="top: 40%; left: 15%;">🌟</div>
-    <div class="hero-content">
-      <h1>Real Stories, Real Inspiration</h1>
-      <p>Discover the journeys, struggles, and triumphs of professionals who've shaped their industries. Through authentic interviews, we connect children with real-world experiences, helping them understand the path to success.</p>
-      <a href="#featured" class="btn btn-primary">
-        <i class="fas fa-play"></i>
-        Watch Latest Interviews
-      </a>
-      <div class="social-icons" style="margin-top: 2rem; justify-content: center;">
-        <a href="https://discord.gg/evergreenfutures" target="_blank"><i class="fab fa-discord"></i></a>
-        <a href="https://www.linkedin.com/company/evergreen-futures" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://www.instagram.com/evergreenfutures" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.tiktok.com/@evergreensfutures" target="_blank"><i class="fab fa-tiktok"></i></a>
-        <a href="https://www.youtube.com/@EvergreenFuturesfound" target="_blank"><i class="fab fa-youtube"></i></a>
-      </div>
-    </div>
-    <div class="scroll-indicator" onclick="scrollToSection('mission')">
-      <span>Learn More</span>
-      <i class="fas fa-chevron-down"></i>
-    </div>
-  </section>
-
-  <!-- Mission Section -->
-  <section id="mission" class="mission">
-    <div class="container">
-      <div class="mission-content">
-        <div class="mission-text">
-          <h2>Our Mission</h2>
-          <p>At Evergreen Futures, we believe that every child deserves to see the real world of work through authentic stories. We connect students with professionals who share their genuine journeys, challenges, and triumphs.</p>
-          <p>Through our interview series, we break down the barriers between aspiration and reality, showing children that success comes in many forms and often involves overcoming significant obstacles.</p>
-          <a href="#featured" class="btn btn-primary">Explore Our Interviews</a>
-        </div>
-        <div class="mission-stats">
-          <div class="stat-card">
-            <h3>1000+</h3>
-            <p>Students Connected</p>
-          </div>
-          <div class="stat-card">
-            <h3>50+</h3>
-            <p>Professional Interviews</p>
-          </div>
-          <div class="stat-card">
-            <h3>20+</h3>
-            <p>Career Fields Explored</p>
-          </div>
-          <div class="stat-card">
-            <h3>85%</h3>
-            <p>Students Report New Career Insights</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Featured Interviews Section -->
-  <section id="featured" class="featured-interviews">
-    <div class="container">
-      <div class="section-header">
-        <h2>Featured Interviews</h2>
-        <p>Real conversations with professionals who share their journey, challenges, and advice for the next generation.</p>
-      </div>
-      <div class="interviews-grid">
-        <div class="interview-card">
-          <div class="interview-image">
-            <i class="fas fa-laptop-code"></i>
-          </div>
-          <div class="interview-content">
-            <h3>Tech Innovator's Journey</h3>
-            <p>From coding in a garage to leading a tech startup - hear about the challenges and lessons learned.</p>
-            <a href="#" class="btn btn-outline">Watch Interview</a>
-          </div>
-        </div>
-        <div class="interview-card">
-          <div class="interview-image">
-            <i class="fas fa-flask"></i>
-          </div>
-          <div class="interview-content">
-            <h3>Breaking Barriers in Science</h3>
-            <p>A female scientist shares her path to groundbreaking research and overcoming gender stereotypes.</p>
-            <a href="#" class="btn btn-outline">Watch Interview</a>
-          </div>
-        </div>
-        <div class="interview-card">
-          <div class="interview-image">
-            <i class="fas fa-paint-brush"></i>
-          </div>
-          <div class="interview-content">
-            <h3>Creative Career Path</h3>
-            <p>An artist's journey from passion to profession, and how they built a successful creative business.</p>
-            <a href="#" class="btn btn-outline">Watch Interview</a>
-          </div>
-        </div>
-      </div>
-      <div style="text-align: center; margin-top: 3rem;">
-        <a href="#" class="btn btn-primary">View All Interviews</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Impact Section -->
-  <section id="impact" class="impact">
-    <div class="container">
-      <div class="section-header">
-        <h2>Our Impact</h2>
-        <p>See how we're helping children discover their potential through real-world stories and experiences.</p>
-      </div>
-      <div class="impact-grid">
-        <div class="impact-card">
-          <i class="fas fa-users"></i>
-          <h3>1000+ Students</h3>
-          <p>Connected with inspiring professionals through our interview series</p>
-        </div>
-        <div class="impact-card">
-          <i class="fas fa-video"></i>
-          <h3>50+ Interviews</h3>
-          <p>Featuring diverse professionals sharing their authentic journeys</p>
-        </div>
-        <div class="impact-card">
-          <i class="fas fa-lightbulb"></i>
-          <h3>New Perspectives</h3>
-          <p>Students gaining insights into various career paths and possibilities</p>
-        </div>
-        <div class="impact-card">
-          <i class="fas fa-chart-line"></i>
-          <h3>Career Clarity</h3>
-          <p>Students reporting clearer understanding of potential career paths</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="contact">
-    <div class="container">
-      <div class="contact-container">
-        <div class="contact-info">
-          <h3>Share Your Story</h3>
-          <p>Are you a professional with an inspiring journey? Help shape the future by sharing your story with the next generation.</p>
-          <div class="contact-details">
-            <div class="contact-detail">
-              <i class="fas fa-envelope"></i>
-              <p>info@evergreenfutures.org</p>
-            </div>
-            <div class="contact-detail">
-              <i class="fas fa-phone"></i>
-              <p>+1 (555) 123-4567</p>
-            </div>
-            <div class="contact-detail">
-              <i class="fas fa-map-marker-alt"></i>
-              <p>San Jose, California</p>
-            </div>
-          </div>
-        </div>
-        <form class="contact-form">
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-          </div>
-          <div class="form-group">
-            <label for="profession">Profession</label>
-            <input type="text" id="profession" name="profession" required>
-          </div>
-          <div class="form-group">
-            <label for="message">Your Story</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">Share Your Journey</button>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-content">
-      <div class="footer-section">
-        <h3>Evergreen Futures</h3>
-        <p>Connecting children with real-world experiences through authentic stories and interviews.</p>
-        <div class="social-icons">
-          <a href="https://discord.gg/evergreenfutures" target="_blank"><i class="fab fa-discord"></i></a>
-          <a href="https://www.linkedin.com/company/evergreen-futures" target="_blank"><i class="fab fa-linkedin"></i></a>
-          <a href="https://www.instagram.com/evergreenfutures" target="_blank"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.tiktok.com/@evergreenfutures" target="_blank"><i class="fab fa-tiktok"></i></a>
-          <a href="https://www.youtube.com/c/EvergreenFutures" target="_blank"><i class="fab fa-youtube"></i></a>
-        </div>
-      </div>
-      <div class="footer-section">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="#mission">Our Mission</a></li>
-          <li><a href="#featured">Interviews</a></li>
-          <li><a href="#impact">Impact</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h3>Connect With Us</h3>
-        <p>Stay updated with our latest interviews and events.</p>
-        <form style="display: flex; margin-top: 1rem;">
-          <input type="email" placeholder="Your email" style="flex: 1; padding: 0.5rem; border-radius: 4px 0 0 4px; border: none; background: rgba(255, 255, 255, 0.1); color: white;">
-          <button type="submit" style="background: var(--primary-color); color: white; border: none; padding: 0.5rem 1rem; border-radius: 0 4px 4px 0; cursor: pointer;">Subscribe</button>
-        </form>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2024 Evergreen Futures. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <!-- JS Libraries -->
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <!-- Custom JS -->
-  <script>
-    // Create shooting stars
-    function createShootingStars() {
-      const bg = document.querySelector('.animated-bg');
-      const numberOfStars = 20;
-
-      for (let i = 0; i < numberOfStars; i++) {
-        const star = document.createElement('div');
-        star.className = 'shooting-star';
-        star.style.top = `${Math.random() * 100}%`;
-        star.style.left = `${Math.random() * 100}%`;
-        star.style.animationDelay = `${Math.random() * 3}s`;
-        bg.appendChild(star);
-      }
+    function typeText() {
+        if (charIndex < textArray[textIndex].length) {
+            document.getElementById("typing-text").innerHTML += textArray[textIndex].charAt(charIndex);
+            charIndex++;
+            setTimeout(typeText, typingSpeed);
+        } else {
+            setTimeout(eraseText, delayBetweenTexts);
+        }
     }
 
-    // Smooth scroll to section
-    function scrollToSection(sectionId) {
-      const section = document.getElementById(sectionId);
-      section.scrollIntoView({ behavior: 'smooth' });
+    function eraseText() {
+        if (charIndex > 0) {
+            document.getElementById("typing-text").innerHTML = textArray[textIndex].substring(0, charIndex - 1);
+            charIndex--;
+            setTimeout(eraseText, erasingSpeed);
+        } else {
+            setTimeout(typeText, typingSpeed);
+        }
     }
 
-    // Initialize
-    createShootingStars();
-
-    // Add scroll event listener for navbar
-    window.addEventListener('scroll', () => {
-      const navbar = document.querySelector('.navbar');
-      if (window.scrollY > 50) {
-        navbar.style.background = 'rgba(26, 26, 26, 0.95)';
-      } else {
-        navbar.style.background = 'rgba(26, 26, 26, 0.8)';
-      }
+    document.addEventListener("DOMContentLoaded", () => {
+        setTimeout(typeText, 500);
     });
+    </script>
 
-    // Add hover effects to cards
-    document.addEventListener('DOMContentLoaded', () => {
-      const cards = document.querySelectorAll('.interview-card, .impact-card, .testimonial-card');
-      
-      cards.forEach(card => {
-        card.addEventListener('mouseenter', () => {
-          card.style.transform = 'translateY(-10px)';
-        });
+    <!--==================== HEADER ====================-->
+    <header class="header">
+        <nav class="nav">
+            <a href="/" class="nav__logo">
+                <img src="public/images/Logo.jpeg" alt="Evergreen Futures Logo">
+                Evergreen Futures
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="/" class="nav__link active">Home</a></li>
+                    <li><a href="/what-we-do.html" class="nav__link">About Us</a></li>
+                    <li><a href="/programs.html" class="nav__link">Programs</a></li>
+                    <li><a href="/internships.html" class="nav__link">Internships</a></li>
+                    <li><a href="/blog.html" class="nav__link">Blog</a></li>
+                    <li><a href="/contact.html" class="button">Get Involved</a></li>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-line"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+        <!--==================== HOME ====================-->
+        <section class="home section" id="home">
+            <div class="home__container container">
+                <div class="home__data">
+                    <h1 class="home__title first">Evergreen Futures</h1>
+                    <h1 class="home__title second">Empowering Youth Through Career Discovery</h1>
+                    <p class="home__description">
+                        Connecting students with real-world professionals to inspire career discovery and unlock potential
+                    </p>
+                    <a href="#programs" class="button">Explore Programs</a>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== ABOUT ====================-->
+        <section class="about">
+            <div class="about__container container">
+                <div class="about__data">
+                    <h2 class="section__title">Our Mission</h2>
+                    <p class="about__description">
+                        At Evergreen Futures, we believe that every child deserves to see the real world of work through authentic experiences. 
+                        Our mission is to break down barriers between aspiration and reality by connecting students with professionals 
+                        who share their genuine journeys, challenges, and triumphs.
+                    </p>
+                    <div class="about__points">
+                        <div class="point">
+                            <img src="public/images/public speech.jpeg" alt="Career speeches icon">
+                            <p>Dynamic career speeches from industry professionals across diverse fields.</p>
+                        </div>
+                        <div class="point">
+                            <img src="public/images/images.jpeg" alt="Workshops icon">
+                            <p>Interactive workshops and hands-on activities to explore different career paths.</p>
+                        </div>
+                    </div>
+                    <a href="/what-we-do.html" class="button">Learn More About Us</a>
+                </div>
+                <div class="about__image">
+                    <img src="public/images/download.jpeg" alt="Students engaged in learning">
+                </div>
+            </div>
+        </section>
+
+        <!--==================== VISION ====================-->
+        <section class="vision">
+            <div class="vision__container container">
+                <div class="vision__image">
+                    <img src="public/images/download.jpeg" alt="Students engaged in career exploration">
+                </div>
+                <div class="vision__data">
+                    <h2 class="section__title">Our Vision</h2>
+                    <p class="vision__description">
+                        We envision a world where no child's potential is limited by lack of exposure to real career opportunities. 
+                        Through dynamic programs, interactive workshops, and authentic connections with professionals, 
+                        we're creating lasting change—one career discovery at a time.
+                    </p>
+                    <a href="/blog.html" class="button">See Our Impact</a>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== OUR VALUES ====================-->
+        <section class="values">
+            <div class="values__container container">
+                <h2 class="section__title">Our Values</h2>
+                <div class="values__content">
+                    <div class="value">
+                        <h3 class="value__title">Authenticity</h3>
+                        <p class="value__description">
+                            We believe in sharing real stories and genuine experiences from professionals.
+                        </p>
+                    </div>
+                    <div class="value">
+                        <h3 class="value__title">Innovation</h3>
+                        <p class="value__description">
+                            We create dynamic and engaging programs that inspire the next generation.
+                        </p>
+                    </div>
+                    <div class="value">
+                        <h3 class="value__title">Empowerment</h3>
+                        <p class="value__description">
+                            We empower youth to discover their potential and pursue their dreams.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== PROGRAMS ====================-->
+        <section class="partner" id="programs">
+            <div class="partner__container">
+                <img src="public/images/public speech.jpeg" alt="Career exploration events" class="partner__logo">
+                <div class="partner__content">
+                    <h2 class="partner__title">Our Programs</h2>
+                    <p class="partner__description">
+                        We offer innovative career exploration experiences designed specifically for youth. 
+                        From dynamic speeches to interactive workshops and engaging competitions, 
+                        our programs connect students with real-world professionals and practical insights.
+                    </p>
+                    <div class="programs__list">
+                        <div class="program__item">
+                            <h3>Career Discovery Workshops</h3>
+                            <p>Interactive sessions where students explore different career paths</p>
+                        </div>
+                        <div class="program__item">
+                            <h3>Professional Speaker Series</h3>
+                            <p>Real professionals sharing their career journeys and insights</p>
+                        </div>
+                        <div class="program__item">
+                            <h3>Internship Opportunities</h3>
+                            <p>Hands-on experience in various industries for youth</p>
+                        </div>
+                        <div class="program__item">
+                            <h3>Career Competitions</h3>
+                            <p>Engaging competitions to showcase skills and creativity</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== HELP US ====================-->
+        <section class="help-us">
+            <div class="container">
+                <h2 class="section__title">Help Us Make a Difference</h2>
+                <p class="section__subtitle">Support our mission to empower youth through career discovery</p>
+                <div class="help-us__content">
+                    <div class="help-us__card">
+                        <div class="help-us__icon">
+                            <i class="ri-heart-line"></i>
+                        </div>
+                        <h3>Make a Donation</h3>
+                        <p>Your financial support helps us provide free programs and resources to more students. Every contribution makes a real difference in a child's future.</p>
+                        <a href="#contact" class="button">Donate Now</a>
+                    </div>
+                    <div class="help-us__card">
+                        <div class="help-us__icon">
+                            <i class="ri-team-line"></i>
+                        </div>
+                        <h3>Volunteer With Us</h3>
+                        <p>Share your expertise and time to inspire the next generation. Whether you're a professional speaker or event helper, we welcome your support.</p>
+                        <a href="#contact" class="button">Get Involved</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== TEAM ====================-->
+        <section class="team">
+            <div class="container">
+                <h2 class="section__title">Meet Our Team</h2>
+                <p class="section__subtitle">Dedicated professionals committed to empowering the next generation</p>
+                <div class="team__grid">
+                    <div class="team__member">
+                        <img src="public/images/Akil_Face.png" alt="Akil" class="team__photo">
+                        <h3 class="team__name">Akil</h3>
+                        <p class="team__role">Founder & CEO</p>
+                    </div>
+                    <div class="team__member">
+                        <img src="public/images/Mahi_Face.png" alt="Mahi" class="team__photo">
+                        <h3 class="team__name">Mahi</h3>
+                        <p class="team__role">Program Director</p>
+                    </div>
+                    <div class="team__member">
+                        <img src="public/images/Nithilan_Face.jpg" alt="Nithilan" class="team__photo">
+                        <h3 class="team__name">Nithilan</h3>
+                        <p class="team__role">Operations Manager</p>
+                    </div>
+                    <div class="team__member">
+                        <img src="public/images/Yeka_Face.png" alt="Yeka" class="team__photo">
+                        <h3 class="team__name">Yeka</h3>
+                        <p class="team__role">Community Outreach</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== FAQ ====================-->
+        <section class="faq">
+            <div class="container">
+              <h2 class="section__title">What's on your mind?</h2>
+              <div class="accordion">
+                <div class="accordion-item">
+                  <button aria-expanded="false">
+                    <span class="accordion-title">How can my child participate in your programs?</span>
+                    <span class="icon" aria-hidden="true"></span>
+                  </button>
+                  <div class="accordion-content">
+                    <p>Our programs are open to children and teenagers interested in career exploration. You can register through our website or contact us directly for upcoming workshops and events.</p>
+                  </div>
+                </div>
         
-        card.addEventListener('mouseleave', () => {
-          card.style.transform = 'translateY(0)';
-        });
+                <div class="accordion-item">
+                  <button aria-expanded="false">
+                    <span class="accordion-title">What types of professionals do you work with?</span>
+                    <span class="icon" aria-hidden="true"></span>
+                  </button>
+                  <div class="accordion-content">
+                    <p>We collaborate with professionals from diverse industries including technology, healthcare, arts, business, science, and more. All our speakers share authentic stories about their career journeys.</p>
+                  </div>
+                </div>
+        
+                <div class="accordion-item">
+                  <button aria-expanded="false">
+                    <span class="accordion-title">Are your programs free?</span>
+                    <span class="icon" aria-hidden="true"></span>
+                  </button>
+                  <div class="accordion-content">
+                    <p>Many of our programs are offered at no cost to ensure accessibility. Some specialized workshops may have a nominal fee to cover materials and resources.</p>
+                  </div>
+                </div>
+        
+                <div class="accordion-item">
+                  <button aria-expanded="false">
+                    <span class="accordion-title">Can I volunteer or become a speaker?</span>
+                    <span class="icon" aria-hidden="true"></span>
+                  </button>
+                  <div class="accordion-content">
+                    <p>Yes! We welcome professionals who want to share their career journey and volunteers who want to support our mission. Contact us to learn about current opportunities.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+        <!--==================== CONTACT ====================-->
+        <section class="contact" id="contact">
+            <div class="contact__container">
+                <div class="contact__content">
+                    <h2 class="contact__title">Get in Touch</h2>
+                    <p class="contact__description">
+                        Have questions about our programs or want to get involved? We'd love to hear from you!
+                    </p>
+                    <div class="contact__info">
+                        <div class="contact__card">
+                            <i class="ri-mail-line contact__card-icon"></i>
+                            <div>
+                                <h3 class="contact__card-title">Email</h3>
+                                <span class="contact__card-data">info@evergreenfutures.org</span>
+                            </div>
+                        </div>
+                        <div class="contact__card">
+                            <i class="ri-map-pin-line contact__card-icon"></i>
+                            <div>
+                                <h3 class="contact__card-title">Location</h3>
+                                <span class="contact__card-data">San Jose, California</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <form action="https://formspree.io/f/xldjopko" method="POST" class="contact__form">
+                    <div class="contact__form-div">
+                        <label class="contact__form-tag">Name</label>
+                        <input type="text" name="name" class="contact__form-input" placeholder="Your Name" required>
+                    </div>
+                    <div class="contact__form-div">
+                        <label class="contact__form-tag">Email</label>
+                        <input type="email" name="email" class="contact__form-input" placeholder="Your Email" required>
+                    </div>
+                    <div class="contact__form-div">
+                        <label class="contact__form-tag">Message</label>
+                        <textarea name="message" class="contact__form-input contact__form-area" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="button">Send Message</button>
+                </form>
+                
+            </div>
+        </section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer">
+        <div class="footer__container container">
+            <div class="footer__content">
+                <div>
+                    <h3 class="footer__title">Evergreen Futures</h3>
+                    <p class="footer__text">Empowering youth through authentic career discovery and real-world experiences.</p>
+                    <div class="footer__social">
+                        <a href="https://discord.gg/evergreenfutures" target="_blank" class="footer__social-link">
+                            <i class="ri-discord-fill"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/evergreen-futures" target="_blank" class="footer__social-link">
+                            <i class="ri-linkedin-fill"></i>
+                        </a>
+                        <a href="https://www.instagram.com/evergreenfutures" target="_blank" class="footer__social-link">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@evergreenfutures" target="_blank" class="footer__social-link">
+                            <i class="ri-tiktok-line"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@EvergreenFuturesfound" target="_blank" class="footer__social-link">
+                            <i class="ri-youtube-fill"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="footer__title">Quick Links</h3>
+                    <ul class="footer__links">
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/what-we-do.html">What We Do</a></li>
+                        <li><a href="/programs.html">Programs</a></li>
+                        <li><a href="/internships.html">Internships</a></li>
+                        <li><a href="/blog.html">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="footer__title">Stay Updated</h3>
+                    <form id="newsletter-form">
+                        <input type="email" placeholder="Enter your email" class="footer__input">
+                        <button type="submit" class="footer__button button">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <span class="footer__copy">&#169; 2024 Evergreen Futures. All rights reserved.</span>
+    </footer>
+
+    <!--========== SCROLL UP ==========-->
+    <a href="#home" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-line"></i>
+    </a>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="js/main.js"></script>
+    <script src="js/faq.js"></script>
+
+    <script>
+        const navMenu = document.getElementById("nav-menu");
+        const navToggle = document.getElementById("nav-toggle");
+        const navClose = document.getElementById("nav-close");
+      
+        if (navToggle) {
+          navToggle.addEventListener("click", () => {
+            navMenu.classList.add("show-menu");
+          });
+        }
+      
+        if (navClose) {
+          navClose.addEventListener("click", () => {
+            navMenu.classList.remove("show-menu");
+          });
+        }
+      
+        document.querySelectorAll(".nav__link").forEach((link) =>
+          link.addEventListener("click", () => {
+            navMenu.classList.remove("show-menu");
+          })
+        );
+      </script>      
+
+    <script>
+    document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = e.target.email.value;
+
+      fetch('/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      })
+      .then(response => response.json())
+      .then(data => {
+        alert('Subscription successful!');
+      })
+      .catch(error => {
+        console.error('Error:', error);
       });
     });
-  </script>
+    </script>
 </body>
 </html>

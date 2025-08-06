@@ -1,129 +1,122 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Theme toggle functionality
-    const themeToggle = document.getElementById('theme-toggle');
-    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-    
-    // Get current theme from localStorage or system preference
-    let currentTheme = localStorage.getItem('theme') || 
-                      (prefersDarkScheme.matches ? 'dark' : 'light');
-    
-    // Set initial theme
-    document.documentElement.setAttribute('data-theme', currentTheme);
-    updateToggleIcon(currentTheme);
+// Main JavaScript for Evergreen Futures
 
-    // Toggle theme on button click
-    themeToggle.addEventListener('click', () => {
-        currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        document.documentElement.setAttribute('data-theme', currentTheme);
-        localStorage.setItem('theme', currentTheme);
-        updateToggleIcon(currentTheme);
-    });
+// Scroll Header Effect
+function scrollHeader() {
+  const header = document.querySelector('.header');
+  if (this.scrollY >= 50) {
+    header.classList.add('scroll-header');
+  } else {
+    header.classList.remove('scroll-header');
+  }
+}
+window.addEventListener('scroll', scrollHeader);
 
-    // Update the toggle icon based on current theme
-    function updateToggleIcon(theme) {
-        const icon = theme === 'dark' ? 'fa-sun' : 'fa-moon';
-        themeToggle.innerHTML = `<i class="fas ${icon}"></i>`;
-    }
+// Scroll Up Button
+function scrollUp() {
+  const scrollUp = document.getElementById('scroll-up');
+  if (this.scrollY >= 350) {
+    scrollUp.classList.add('show-scroll');
+  } else {
+    scrollUp.classList.remove('show-scroll');
+  }
+}
+window.addEventListener('scroll', scrollUp);
 
-    // Navbar scroll effect with enhanced behavior
-    const navbar = document.querySelector('.navbar');
-    const navLinks = document.querySelectorAll('.nav-links a');
-    const sections = document.querySelectorAll('section');
-    
-    // Smooth scroll for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-            
-            if (targetSection) {
-                window.scrollTo({
-                    top: targetSection.offsetTop - navbar.offsetHeight,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-    
-    // Scroll indicator functionality
-    const scrollIndicators = document.querySelectorAll('.scroll-indicator');
-    scrollIndicators.forEach(indicator => {
-        indicator.addEventListener('click', function() {
-            const currentSection = this.closest('section');
-            const nextSection = currentSection.nextElementSibling;
-            
-            if (nextSection) {
-                window.scrollTo({
-                    top: nextSection.offsetTop - navbar.offsetHeight,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-    
-    // Intersection Observer for scroll animations
-    const appearOptions = {
-        threshold: 0.15,
-        rootMargin: "0px 0px -100px 0px"
-    };
-    
-    const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
-        entries.forEach(entry => {
-            if (!entry.isIntersecting) {
-                return;
-            } else {
-                entry.target.classList.add('appear');
-                appearOnScroll.unobserve(entry.target);
-            }
-        });
-    }, appearOptions);
-    
-    // Apply animation classes to elements
-    document.querySelectorAll('.animate-on-scroll').forEach(element => {
-        appearOnScroll.observe(element);
-    });
-    
-    // Highlight active section in navbar
-    const observerOptions = {
-        rootMargin: `-${navbar.offsetHeight}px 0px 0px 0px`,
-        threshold: 0.2
-    };
-    
-    const navObserver = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            const id = entry.target.getAttribute('id');
-            const navLink = document.querySelector(`.nav-links a[href="#${id}"]`);
-            
-            if (entry.isIntersecting) {
-                document.querySelectorAll('.nav-links a').forEach(link => {
-                    link.classList.remove('active');
-                });
-                if (navLink) {
-                    navLink.classList.add('active');
-                }
-            }
-        });
-    }, observerOptions);
-    
-    // Observe all sections for navbar highlighting
-    sections.forEach(section => {
-        navObserver.observe(section);
-    });
-    
-    // Enhanced navbar scroll effect
-    if (navbar) {
-        window.addEventListener('scroll', () => {
-            navbar.setAttribute('data-scroll', window.scrollY > 50 ? 'scrolled' : '');
-        });
-    }
-    
-    // Add parallax effect to hero section
-    const hero = document.querySelector('.hero');
-    if (hero) {
-        window.addEventListener('scroll', () => {
-            const scrollPosition = window.scrollY;
-            hero.style.backgroundPositionY = `${scrollPosition * 0.5}px`;
-        });
-    }
+// Mobile Menu Toggle
+const navMenu = document.getElementById('nav-menu');
+const navToggle = document.getElementById('nav-toggle');
+const navClose = document.getElementById('nav-close');
+
+if (navToggle) {
+  navToggle.addEventListener('click', () => {
+    navMenu.classList.add('show-menu');
+  });
+}
+
+if (navClose) {
+  navClose.addEventListener('click', () => {
+    navMenu.classList.remove('show-menu');
+  });
+}
+
+// Close menu when clicking on nav links
+document.querySelectorAll('.nav__link').forEach(link => {
+  link.addEventListener('click', () => {
+    navMenu.classList.remove('show-menu');
+  });
 });
+
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
+
+// Newsletter form submission
+document.addEventListener('DOMContentLoaded', function() {
+  const newsletterForm = document.getElementById('newsletter-form');
+  if (newsletterForm) {
+    newsletterForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = this.querySelector('input[type="email"]').value;
+      
+      // Show success message
+      alert('Thank you for subscribing to our newsletter!');
+      this.reset();
+    });
+  }
+});
+
+// Contact form submission
+document.addEventListener('DOMContentLoaded', function() {
+  const contactForm = document.querySelector('.contact__form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Show success message
+      alert('Thank you for your message! We will get back to you soon.');
+      this.reset();
+    });
+  }
+});
+
+// Animation on scroll
+function animateOnScroll() {
+  const elements = document.querySelectorAll('.point, .value, .contact__card');
+  
+  elements.forEach(element => {
+    const elementTop = element.getBoundingClientRect().top;
+    const elementVisible = 150;
+    
+    if (elementTop < window.innerHeight - elementVisible) {
+      element.classList.add('animate');
+    }
+  });
+}
+
+window.addEventListener('scroll', animateOnScroll);
+
+// Add animation class to CSS
+const style = document.createElement('style');
+style.textContent = `
+  .point, .value, .contact__card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+  }
+  
+  .point.animate, .value.animate, .contact__card.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+document.head.appendChild(style);

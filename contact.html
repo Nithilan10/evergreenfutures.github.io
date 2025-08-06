@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="public/images/Logo.jpeg" type="image/x-icon">
+    
+    <!--=============== REMIXICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
+    
+    <!--=============== GOOGLE FONTS ===============-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="css/styles.css?v=4.0">
+    
+    <title>Contact Us - Evergreen Futures</title>
+</head>
+<body>
+    <!--==================== HEADER ====================-->
+    <header class="header">
+        <nav class="nav">
+            <a href="/" class="nav__logo">
+                <img src="public/images/Logo.jpeg" alt="Evergreen Futures Logo">
+                Evergreen Futures
+            </a>
+            
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="/" class="nav__link">Home</a></li>
+                    <li><a href="/what-we-do.html" class="nav__link">About Us</a></li>
+                    <li><a href="/programs.html" class="nav__link">Programs</a></li>
+                    <li><a href="/internships.html" class="nav__link">Internships</a></li>
+                    <li><a href="/blog.html" class="nav__link">Blog</a></li>
+                    <li><a href="/contact.html" class="nav__link active">Get Involved</a></li>
+                </ul>
+                
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+            
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-line"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!--==================== CONTACT HERO ====================-->
+        <section class="page-hero">
+            <div class="container">
+                <div class="page-hero__content">
+                    <h1 class="page-hero__title">Get Involved</h1>
+                    <p class="page-hero__description">
+                        Ready to make a difference? Contact us to learn how you can support our mission or get involved with our programs
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== CONTACT INFO ====================-->
+        <section class="contact-info">
+            <div class="container">
+                <div class="contact-info__grid">
+                    <div class="contact-info__card">
+                        <div class="contact-info__icon">
+                            <i class="ri-mail-line"></i>
+                        </div>
+                        <h3>Email Us</h3>
+                        <p>Have questions about our programs or want to learn more?</p>
+                        <span>info@evergreenfutures.org</span>
+                    </div>
+
+                    <div class="contact-info__card">
+                        <div class="contact-info__icon">
+                            <i class="ri-phone-line"></i>
+                        </div>
+                        <h3>Call Us</h3>
+                        <p>Speak directly with our team about opportunities</p>
+                        <span>+1 (555) 123-4567</span>
+                    </div>
+
+                    <div class="contact-info__card">
+                        <div class="contact-info__icon">
+                            <i class="ri-map-pin-line"></i>
+                        </div>
+                        <h3>Visit Us</h3>
+                        <p>Come by our office to learn more in person</p>
+                        <span>123 Career Drive, San Jose, CA 95123</span>
+                    </div>
+
+                    <div class="contact-info__card">
+                        <div class="contact-info__icon">
+                            <i class="ri-time-line"></i>
+                        </div>
+                        <h3>Office Hours</h3>
+                        <p>We're here to help during these times</p>
+                        <span>Mon-Fri: 9:00 AM - 6:00 PM</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== CONTACT FORMS ====================-->
+        <section class="contact-forms">
+            <div class="container">
+                <h2 class="section__title">Get in Touch</h2>
+                <div class="forms-grid">
+                    <!-- General Contact Form -->
+                    <div class="form-card">
+                        <h3>General Inquiry</h3>
+                        <p>Have a question or want to learn more about our programs? Send us a message!</p>
+                        <form class="contact-form">
+                            <div class="form-group">
+                                <label for="general-name">Full Name</label>
+                                <input type="text" id="general-name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="general-email">Email Address</label>
+                                <input type="email" id="general-email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="general-subject">Subject</label>
+                                <input type="text" id="general-subject" name="subject" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="general-message">Message</label>
+                                <textarea id="general-message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="button">Send Message</button>
+                        </form>
+                    </div>
+
+                    <!-- Program Registration Form -->
+                    <div class="form-card">
+                        <h3>Program Registration</h3>
+                        <p>Ready to join one of our programs? Register here and we'll get back to you with details.</p>
+                        <form class="contact-form">
+                            <div class="form-group">
+                                <label for="program-name">Full Name</label>
+                                <input type="text" id="program-name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="program-email">Email Address</label>
+                                <input type="email" id="program-email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="program-interest">Program of Interest</label>
+                                <select id="program-interest" name="program" required>
+                                    <option value="">Select a program</option>
+                                    <option value="speaker-series">Professional Speaker Series</option>
+                                    <option value="workshops">Career Discovery Workshops</option>
+                                    <option value="competitions">Career Competitions</option>
+                                    <option value="internships">Internship Programs</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="program-message">Additional Information</label>
+                                <textarea id="program-message" name="message" rows="4"></textarea>
+                            </div>
+                            <button type="submit" class="button">Register Interest</button>
+                        </form>
+                    </div>
+
+                    <!-- Volunteer Form -->
+                    <div class="form-card">
+                        <h3>Volunteer With Us</h3>
+                        <p>Share your expertise and help inspire the next generation. We welcome volunteers in various capacities.</p>
+                        <form class="contact-form">
+                            <div class="form-group">
+                                <label for="volunteer-name">Full Name</label>
+                                <input type="text" id="volunteer-name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="volunteer-email">Email Address</label>
+                                <input type="email" id="volunteer-email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="volunteer-role">Volunteer Role</label>
+                                <select id="volunteer-role" name="role" required>
+                                    <option value="">Select a role</option>
+                                    <option value="speaker">Professional Speaker</option>
+                                    <option value="mentor">Career Mentor</option>
+                                    <option value="workshop-leader">Workshop Leader</option>
+                                    <option value="event-support">Event Support</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="volunteer-experience">Professional Experience</label>
+                                <textarea id="volunteer-experience" name="experience" rows="4" placeholder="Tell us about your professional background and expertise"></textarea>
+                            </div>
+                            <button type="submit" class="button">Apply to Volunteer</button>
+                        </form>
+                    </div>
+
+                    <!-- Donation Form -->
+                    <div class="form-card">
+                        <h3>Make a Donation</h3>
+                        <p>Support our mission to empower youth through career discovery. Every contribution makes a difference.</p>
+                        <form class="contact-form">
+                            <div class="form-group">
+                                <label for="donor-name">Full Name</label>
+                                <input type="text" id="donor-name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="donor-email">Email Address</label>
+                                <input type="email" id="donor-email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="donation-amount">Donation Amount</label>
+                                <select id="donation-amount" name="amount" required>
+                                    <option value="">Select amount</option>
+                                    <option value="25">$25 - Provide program materials for one student</option>
+                                    <option value="50">$50 - Support a workshop session</option>
+                                    <option value="100">$100 - Sponsor a student for a full program</option>
+                                    <option value="250">$250 - Fund a professional speaker event</option>
+                                    <option value="500">$500 - Support an entire workshop series</option>
+                                    <option value="custom">Custom Amount</option>
+                                </select>
+                            </div>
+                            <div class="form-group" id="custom-amount-group" style="display: none;">
+                                <label for="custom-amount">Custom Amount ($)</label>
+                                <input type="number" id="custom-amount" name="custom_amount" min="1" step="1">
+                            </div>
+                            <div class="form-group">
+                                <label for="donation-message">Message (Optional)</label>
+                                <textarea id="donation-message" name="message" rows="3" placeholder="Share why you're supporting our mission"></textarea>
+                            </div>
+                            <button type="submit" class="button">Donate Now</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== CONTACT FAQ ====================-->
+        <section class="contact-faq">
+            <div class="container">
+                <h2 class="section__title">Frequently Asked Questions</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3>How can I get involved with Evergreen Futures?</h3>
+                        <p>There are many ways to get involved! You can participate in our programs as a student, volunteer as a professional speaker or mentor, or support our mission through donations. Contact us to learn more about specific opportunities.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Are your programs free for students?</h3>
+                        <p>Yes, all our programs are completely free for students. We believe that career exploration should be accessible to everyone, regardless of financial circumstances.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>What age groups do you serve?</h3>
+                        <p>Our programs are designed for students in middle school through high school (ages 12-18). We also offer some opportunities for college students and young professionals.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>How can professionals volunteer with your organization?</h3>
+                        <p>Professionals can volunteer as speakers, mentors, workshop leaders, or event support. We welcome volunteers from all industries and career backgrounds. Contact us to discuss specific opportunities.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Do you offer programs outside of the Bay Area?</h3>
+                        <p>Currently, our in-person programs are primarily in the Bay Area, but we're expanding! We also offer some virtual programs that are accessible nationwide. Contact us to learn about programs in your area.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>How can I stay updated about new programs and events?</h3>
+                        <p>Subscribe to our newsletter, follow us on social media, or check our blog regularly for updates about new programs, events, and opportunities to get involved.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer">
+        <div class="footer__container container">
+            <div class="footer__content">
+                <div>
+                    <h3 class="footer__title">Evergreen Futures</h3>
+                    <p class="footer__text">Empowering youth through career discovery and professional development.</p>
+                    <div class="footer__social">
+                        <a href="#" target="_blank" class="footer__social-link">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                        <a href="#" target="_blank" class="footer__social-link">
+                            <i class="ri-youtube-fill"></i>
+                        </a>
+                        <a href="#" target="_blank" class="footer__social-link">
+                            <i class="ri-linkedin-fill"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="footer__title">Quick Links</h3>
+                    <ul class="footer__links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/what-we-do.html">About Us</a></li>
+                        <li><a href="/programs.html">Programs</a></li>
+                        <li><a href="/internships.html">Internships</a></li>
+                        <li><a href="/blog.html">Blog</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="footer__title">Stay Updated</h3>
+                    <form id="newsletter-form" class="footer__form">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <span class="footer__copy">&#169; 2024 Evergreen Futures. All rights reserved.</span>
+    </footer>
+
+    <!--========== SCROLL UP ==========-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-line"></i>
+    </a>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="js/main.js"></script>
+    <script>
+    // Custom donation amount toggle
+    const donationSelect = document.getElementById('donation-amount');
+    const customAmountGroup = document.getElementById('custom-amount-group');
+
+    donationSelect.addEventListener('change', function() {
+        if (this.value === 'custom') {
+            customAmountGroup.style.display = 'block';
+        } else {
+            customAmountGroup.style.display = 'none';
+        }
+    });
+
+    // Form submission handling
+    const contactForms = document.querySelectorAll('.contact-form');
+    contactForms.forEach(form => {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const formType = this.closest('.form-card').querySelector('h3').textContent;
+            
+            // Simulate form submission
+            alert(`Thank you for your ${formType.toLowerCase()} submission! We'll get back to you soon.`);
+            
+            // Reset form
+            this.reset();
+            if (customAmountGroup) {
+                customAmountGroup.style.display = 'none';
+            }
+        });
+    });
+
+    // Newsletter form
+    document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const emailInput = e.target.querySelector('input[name="email"]');
+        const email = emailInput ? emailInput.value : '';
+        
+        // Simulate form submission
+        alert('Thank you for subscribing!');
+        emailInput.value = '';
+    });
+    </script>
+</body>
+</html> 

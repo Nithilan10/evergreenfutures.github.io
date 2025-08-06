@@ -3,91 +3,338 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programs | Evergreen Futures</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="css/styles.css">
+    
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="public/images/Logo.jpeg" type="image/x-icon">
+    
+    <!--=============== REMIXICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
+    
+    <!--=============== GOOGLE FONTS ===============-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="css/styles.css?v=4.0">
+    
+    <title>Our Programs - Evergreen Futures</title>
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">
-                <i class="fas极光加速器下载_极光加速器安卓版下载_极光加速器官方版下载-太平洋下载中心:2021-6-15 · 极光加速器官方版是款可伍帮助用户们快速加速网络的工具。极光加速器最新版可伍帮助用户一键加速，降低延迟，提高网速，让用户可伍流畅的观看视频、玩游戏等。极光加速器还可伍帮助用户智能选择最优线路，让用户可伍快速的访问网络，并且软件还拥有超强的兼容性，可伍兼容各种游戏和应用程序。. fa-tree"></i>
+    <!--==================== HEADER ====================-->
+    <header class="header">
+        <nav class="nav">
+            <a href="/" class="nav__logo">
+                <img src="public/images/Logo.jpeg" alt="Evergreen Futures Logo">
                 Evergreen Futures
             </a>
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="what-we-do.html">What We Do</a>
-                <a href="programs.html" class="active">Programs</a>
-                <a href="internships.html">Internships</a>
-                <a href="blog.html">Blog</a>
+            
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="/" class="nav__link">Home</a></li>
+                    <li><a href="/what-we-do.html" class="nav__link">About Us</a></li>
+                    <li><a href="/programs.html" class="nav__link active">Programs</a></li>
+                    <li><a href="/internships.html" class="nav__link">Internships</a></li>
+                    <li><a href="/blog.html" class="nav__link">Blog</a></li>
+                    <li><a href="/contact.html" class="button">Get Involved</a></li>
+                </ul>
+                
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
             </div>
-            <div class="nav-buttons">
-                <i class="fas fa-search"></i>
-                <i class="fas fa-bell"></i>
-                <button class="btn btn-primary">Login</button>
-                <i id="theme-toggle" class="fas fa-moon" style="cursor: pointer; font-size: 1.2rem;"></i>
+            
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-line"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!--==================== PROGRAMS HERO ====================-->
+        <section class="page-hero">
+            <div class="container">
+                <div class="page-hero__content">
+                    <h1 class="page-hero__title">Our Programs</h1>
+                    <p class="page-hero__description">
+                        Discover our comprehensive range of career exploration programs designed to inspire and empower youth
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== FEATURED PROGRAMS ====================-->
+        <section class="featured-programs">
+            <div class="container">
+                <h2 class="section__title">Featured Programs</h2>
+                <div class="programs-grid">
+                    <div class="program-card featured">
+                        <div class="program-card__image">
+                            <img src="public/images/public speech.jpeg" alt="Professional Speaker Series">
+                            <span class="program-card__badge">Featured</span>
+                        </div>
+                        <div class="program-card__content">
+                            <h3>Professional Speaker Series</h3>
+                            <p>Connect with industry leaders and successful professionals who share their career journeys, challenges, and insights.</p>
+                            <ul class="program-card__features">
+                                <li><i class="ri-check-line"></i> Monthly sessions</li>
+                                <li><i class="ri-check-line"></i> Q&A opportunities</li>
+                                <li><i class="ri-check-line"></i> Networking events</li>
+                            </ul>
+                            <div class="program-card__footer">
+                                <span class="program-card__price">Free</span>
+                                <a href="/contact.html" class="button">Register Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="program-card">
+                        <div class="program-card__image">
+                            <img src="public/images/download.jpeg" alt="Career Discovery Workshops">
+                        </div>
+                        <div class="program-card__content">
+                            <h3>Career Discovery Workshops</h3>
+                            <p>Interactive workshops where students explore different career paths through hands-on activities and skill-building exercises.</p>
+                            <ul class="program-card__features">
+                                <li><i class="ri-check-line"></i> Hands-on activities</li>
+                                <li><i class="ri-check-line"></i> Skill development</li>
+                                <li><i class="ri-check-line"></i> Career assessments</li>
+                            </ul>
+                            <div class="program-card__footer">
+                                <span class="program-card__price">Free</span>
+                                <a href="/contact.html" class="button">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="program-card">
+                        <div class="program-card__image">
+                            <img src="public/images/images.jpeg" alt="Career Competitions">
+                        </div>
+                        <div class="program-card__content">
+                            <h3>Career Competitions</h3>
+                            <p>Engaging competitions that challenge students to apply their knowledge and creativity in real-world scenarios.</p>
+                            <ul class="program-card__features">
+                                <li><i class="ri-check-line"></i> Team challenges</li>
+                                <li><i class="ri-check-line"></i> Real-world projects</li>
+                                <li><i class="ri-check-line"></i> Prize opportunities</li>
+                            </ul>
+                            <div class="program-card__footer">
+                                <span class="program-card__price">Free</span>
+                                <a href="/contact.html" class="button">Join Competition</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== PROGRAM CATEGORIES ====================-->
+        <section class="program-categories">
+            <div class="container">
+                <h2 class="section__title">Program Categories</h2>
+                <div class="categories-grid">
+                    <div class="category-card">
+                        <div class="category-card__icon">
+                            <i class="ri-mic-line"></i>
+                        </div>
+                        <h3>Speaking Events</h3>
+                        <p>Inspirational talks and presentations from industry professionals across various fields.</p>
+                        <a href="/contact.html" class="category-card__link">Explore Events</a>
+                    </div>
+
+                    <div class="category-card">
+                        <div class="category-card__icon">
+                            <i class="ri-tools-line"></i>
+                        </div>
+                        <h3>Workshops</h3>
+                        <p>Interactive sessions focused on skill development and hands-on learning experiences.</p>
+                        <a href="/contact.html" class="category-card__link">View Workshops</a>
+                    </div>
+
+                    <div class="category-card">
+                        <div class="category-card__icon">
+                            <i class="ri-trophy-line"></i>
+                        </div>
+                        <h3>Competitions</h3>
+                        <p>Challenging competitions that test creativity, problem-solving, and teamwork skills.</p>
+                        <a href="/contact.html" class="category-card__link">Join Competitions</a>
+                    </div>
+
+                    <div class="category-card">
+                        <div class="category-card__icon">
+                            <i class="ri-team-line"></i>
+                        </div>
+                        <h3>Mentorship</h3>
+                        <p>One-on-one guidance from experienced professionals in your field of interest.</p>
+                        <a href="/contact.html" class="category-card__link">Find Mentor</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== UPCOMING EVENTS ====================-->
+        <section class="upcoming-events">
+            <div class="container">
+                <h2 class="section__title">Upcoming Events</h2>
+                <div class="events-grid">
+                    <div class="event-card">
+                        <div class="event-card__date">
+                            <span class="event-card__day">15</span>
+                            <span class="event-card__month">Dec</span>
+                        </div>
+                        <div class="event-card__content">
+                            <h3>Tech Industry Panel Discussion</h3>
+                            <p>Join us for an insightful discussion with tech professionals about career opportunities in the digital age.</p>
+                            <div class="event-card__details">
+                                <span><i class="ri-time-line"></i> 2:00 PM - 4:00 PM</span>
+                                <span><i class="ri-map-pin-line"></i> Virtual Event</span>
+                            </div>
+                            <a href="/contact.html" class="button">Register</a>
+                        </div>
+                    </div>
+
+                    <div class="event-card">
+                        <div class="event-card__date">
+                            <span class="event-card__day">22</span>
+                            <span class="event-card__month">Dec</span>
+                        </div>
+                        <div class="event-card__content">
+                            <h3>Healthcare Career Workshop</h3>
+                            <p>Explore various healthcare professions through interactive activities and expert presentations.</p>
+                            <div class="event-card__details">
+                                <span><i class="ri-time-line"></i> 1:00 PM - 3:30 PM</span>
+                                <span><i class="ri-map-pin-line"></i> Community Center</span>
+                            </div>
+                            <a href="/contact.html" class="button">Register</a>
+                        </div>
+                    </div>
+
+                    <div class="event-card">
+                        <div class="event-card__date">
+                            <span class="event-card__day">05</span>
+                            <span class="event-card__month">Jan</span>
+                        </div>
+                        <div class="event-card__content">
+                            <h3>Business Innovation Challenge</h3>
+                            <p>Compete in teams to solve real business problems and present innovative solutions to industry judges.</p>
+                            <div class="event-card__details">
+                                <span><i class="ri-time-line"></i> 9:00 AM - 5:00 PM</span>
+                                <span><i class="ri-map-pin-line"></i> Innovation Hub</span>
+                            </div>
+                            <a href="/contact.html" class="button">Register</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== PARTICIPATION GUIDE ====================-->
+        <section class="participation-guide">
+            <div class="container">
+                <h2 class="section__title">How to Participate</h2>
+                <div class="participation-steps">
+                    <div class="participation-step">
+                        <div class="participation-step__number">1</div>
+                        <h3>Browse Programs</h3>
+                        <p>Explore our diverse range of programs and events to find what interests you most.</p>
+                    </div>
+                    <div class="participation-step">
+                        <div class="participation-step__number">2</div>
+                        <h3>Register Online</h3>
+                        <p>Sign up for your chosen program through our easy online registration system.</p>
+                    </div>
+                    <div class="participation-step">
+                        <div class="participation-step__number">3</div>
+                        <h3>Attend & Engage</h3>
+                        <p>Participate actively in programs, ask questions, and network with professionals.</p>
+                    </div>
+                    <div class="participation-step">
+                        <div class="participation-step__number">4</div>
+                        <h3>Apply Learning</h3>
+                        <p>Use the insights and skills gained to explore career paths and make informed decisions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== CTA SECTION ====================-->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to Start Your Career Journey?</h2>
+                    <p>Join our programs today and take the first step towards discovering your passion and building a successful future.</p>
+                    <div class="cta-buttons">
+                        <a href="/contact.html" class="button">Get Started</a>
+                        <a href="/internships.html" class="button button--outline">Explore Internships</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer">
+        <div class="footer__container container">
+            <div class="footer__content">
+                <div>
+                    <h3 class="footer__title">Evergreen Futures</h3>
+                    <p class="footer__text">Empowering youth through career discovery and professional development.</p>
+                    <div class="footer__social">
+                        <a href="#" target="_blank" class="footer__social-link">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                        <a href="#" target="_blank" class="footer__social-link">
+                            <i class="ri-youtube-fill"></i>
+                        </a>
+                        <a href="#" target="_blank" class="footer__social-link">
+                            <i class="ri-linkedin-fill"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="footer__title">Quick Links</h3>
+                    <ul class="footer__links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/what-we-do.html">About Us</a></li>
+                        <li><a href="/programs.html">Programs</a></li>
+                        <li><a href="/internships.html">Internships</a></li>
+                        <li><a href="/blog.html">Blog</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="footer__title">Stay Updated</h3>
+                    <form id="newsletter-form" class="footer__form">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
             </div>
         </div>
-    </nav>
+        <span class="footer__copy">&#169; 2024 Evergreen Futures. All rights reserved.</span>
+    </footer>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Our Programs</h1>
-            <p>Innovative career exploration experiences designed for youth</p>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-discord"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-tiktok"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-            </div>
-        </div>
-    </section>
+    <!--========== SCROLL UP ==========-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-line"></i>
+    </a>
 
-    <!-- Program Timeline -->
-    <section class="dashboard">
-        <div class="dashboard-content">
-            <h2>Program Timeline</h2>
-            <div class="dashboard-grid">
-                <div class="dashboard-card">
-                    <h3>Career Discovery Series</h3>
-                    <p>Monthly workshops featuring professionals from different industries</p>
-                </div>
-                <div class="dashboard-card">
-                    <h3>Skills Bootcamp</h3>
-                    <p>Intensive 2-week program focusing on essential career skills</p>
-                </div>
-                <div class="dashboard-card">
-                    <h3>Industry Challenges</h3>
-                    <p>Quarterly competitions solving real-world problems</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Statistics Section -->
-    <section class="dashboard">
-        <div class="dashboard-content">
-            <h2>By The Numbers</h2>
-            <div class="dashboard-grid">
-                <div class="dashboard-card">
-                    <h3>500+</h3>
-                    <p>Students Reached</p>
-                </div>
-                <div class="dashboard-card">
-                    <h3>50+</h3>
-                    <p>Industry Partners</p>
-                </div>
-                <div class="dashboard-card">
-                    <h3>12</h3>
-                    <p>Programs Offered</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    <!--=============== MAIN JS ===============-->
     <script src="js/main.js"></script>
+    <script>
+    // Newsletter form
+    document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const emailInput = e.target.querySelector('input[name="email"]');
+        const email = emailInput ? emailInput.value : '';
+        
+        // Simulate form submission
+        alert('Thank you for subscribing!');
+        emailInput.value = '';
+    });
+    </script>
 </body>
 </html>

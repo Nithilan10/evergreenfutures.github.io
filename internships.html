@@ -3,151 +3,351 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Internships | Evergreen Futures</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <style>
-        /* Internship specific styles */
-        .internship-card {
-            background: var(--card-bg);
-            padding: 1.5rem;
-            border-radius: 12px;
-            margin-bottom: 1.5rem;
-            transition: transform 0.3s ease, background 0.3s ease;
-        }
-        .internship-card:hover {
-            transform: translateY(-5px);
-        }
-        .apply-btn {
-            display: inline-block;
-            margin-top: 1rem;
-            padding: 0.75rem 1.5rem;
-            background: var(--primary);
-            color: white;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: background 0.3s ease;
-        }
-        .apply-btn:hover {
-            background: var(--secondary);
-        }
-        form input,
-        form select {
-            width: 100%;
-            padding: 0.5rem;
-            border-radius: 4px;
-            border: none;
-            background: rgba(255,255,255,0.1);
-            color: var(--text-color);
-        }
-        form label {
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-        form div {
-            margin-bottom: 1rem;
-        }
-    </style>
+    
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="public/images/Logo.jpeg" type="image/x-icon">
+    
+    <!--=============== REMIXICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
+    
+    <!--=============== GOOGLE FONTS ===============-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="css/styles.css?v=4.0">
+    
+    <title>Internship Opportunities - Evergreen Futures</title>
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">
-                <i class="fas fa-tree"></i>
+    <!--==================== HEADER ====================-->
+    <header class="header">
+        <nav class="nav">
+            <a href="/" class="nav__logo">
+                <img src="public/images/Logo.jpeg" alt="Evergreen Futures Logo">
                 Evergreen Futures
             </a>
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="what-we-do.html">What We Do</a>
-                <a href="programs.html">Programs</a>
-                <a href="internships.html" class="active">Internships</a>
-                <a href="blog.html">Blog</a>
-            </div>
-            <div class="nav-buttons">
-                <i class="fas fa-search"></i>
-                <i class="fas fa-bell"></i>
-                <button class="btn btn-primary">Login</button>
-                <button id="theme-toggle" class="btn btn-icon" aria-label="Toggle theme">
-                    <i class="fas fa-moon"></i>
-                </button>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Internship Opportunities</h1>
-            <p>Gain real-world experience and build your career with our internship programs</p>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-discord"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-tiktok"></i></a>
-                <a href="#"><i极光加速器下载_极光加速器安卓版下载_极光加速器官方版下载-太平洋下载中心:2021-6-15 · 极光加速器官方版是款可伍帮助用户们快速加速网络的工具。极光加速器最新版可伍帮助用户一键加速，降低延迟，提高网速，让用户可伍流畅的观看视频、玩游戏等。极光加速器还可伍帮助用户智能选择最优线路，让用户可伍快速的访问网络，并且软件还拥有超强的兼容性，可伍兼容各种游戏和应用程序。. class="fab fa-youtube"></i></a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Internships List -->
-    <section class="dashboard">
-        <div class极光加速器下载_极光加速器安卓版下载_极光加速器官方版下载-太平洋下载中心:2021-6-15 · 极光加速器官方版是款可伍帮助用户们快速加速网络的工具。极光加速器最新版可伍帮助用户一键加速，降低延迟，提高网速，让用户可伍流畅的观看视频、玩游戏等。极光加速器还可伍帮助用户智能选择最优线路，让用户可伍快速的访问网络，并且软件还拥有超强的兼容性，可伍兼容各种游戏和应用程序。.dashboard-content>
-            <h2>Available Internships</h2>
             
-            <div class="internship-card">
-                <h3>Career Exploration Intern</h3>
-                <p><strong>Duration:</strong> 3 months</p>
-                <p><strong>Location:</strong> Remote</p>
-                <p>Assist in organizing career exploration events and workshops for students.</p>
-                <a href="#apply" class="apply-btn">Apply Here</a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="/" class="nav__link">Home</a></li>
+                    <li><a href="/what-we-do.html" class="nav__link">About Us</a></li>
+                    <li><a href="/programs.html" class="nav__link">Programs</a></li>
+                    <li><a href="/internships.html" class="nav__link active">Internships</a></li>
+                    <li><a href="/blog.html" class="nav__link">Blog</a></li>
+                    <li><a href="/contact.html" class="button">Get Involved</a></li>
+                </ul>
+                
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
             </div>
-
-            <div class="internship-card">
-                <h3>Content Development Intern</h3>
-                <p><strong>Duration:</strong> 6 months</p>
-                <p><strong>Location:</strong> Hybrid</p>
-                <p>Create educational content about different career paths for our platform.</p>
-                <a href="#apply" class="apply-btn">Apply Here</a>
+            
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-line"></i>
             </div>
+        </nav>
+    </header>
 
-            <div class="internship-card">
-                <h3>Event Coordination Intern</h3>
-                <p><strong>Duration:</strong> 4 months</p>
-                <p><strong>Location:</strong> On-site</p>
-                <p>Help coordinate and manage career exploration events and competitions.</p>
-                <a href="#apply" class="apply-btn">Apply Here</a>
+    <main class="main">
+        <!--==================== INTERNSHIPS HERO ====================-->
+        <section class="page-hero">
+            <div class="container">
+                <div class="page-hero__content">
+                    <h1 class="page-hero__title">Internship Opportunities</h1>
+                    <p class="page-hero__description">
+                        Gain real-world experience and explore your career interests through our diverse internship programs
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== INTERNSHIP PROGRAMS ====================-->
+        <section class="internship-programs">
+            <div class="container">
+                <h2 class="section__title">Available Internship Programs</h2>
+                <div class="internship-grid">
+                    <div class="internship-card">
+                        <div class="internship-card__header">
+                            <i class="ri-computer-line internship-card__icon"></i>
+                            <h3>Technology & Innovation</h3>
+                        </div>
+                        <div class="internship-card__content">
+                            <p>Work with cutting-edge technology companies and startups. Learn coding, design, and digital innovation.</p>
+                            <ul class="internship-card__details">
+                                <li><strong>Duration:</strong> 8-12 weeks</li>
+                                <li><strong>Location:</strong> San Jose, CA</li>
+                                <li><strong>Stipend:</strong> $15-20/hour</li>
+                                <li><strong>Requirements:</strong> Basic programming knowledge</li>
+                            </ul>
+                            <a href="/contact.html" class="button">Apply Now</a>
+                        </div>
+                    </div>
+
+                    <div class="internship-card">
+                        <div class="internship-card__header">
+                            <i class="ri-heart-pulse-line internship-card__icon"></i>
+                            <h3>Healthcare & Medicine</h3>
+                        </div>
+                        <div class="internship-card__content">
+                            <p>Shadow healthcare professionals and learn about various medical careers and patient care.</p>
+                            <ul class="internship-card__details">
+                                <li><strong>Duration:</strong> 6-10 weeks</li>
+                                <li><strong>Location:</strong> Bay Area Hospitals</li>
+                                <li><strong>Stipend:</strong> $12-18/hour</li>
+                                <li><strong>Requirements:</strong> Interest in healthcare</li>
+                            </ul>
+                            <a href="/contact.html" class="button">Apply Now</a>
+                        </div>
+                    </div>
+
+                    <div class="internship-card">
+                        <div class="internship-card__header">
+                            <i class="ri-briefcase-line internship-card__icon"></i>
+                            <h3>Business & Marketing</h3>
+                        </div>
+                        <div class="internship-card__content">
+                            <p>Gain experience in business operations, marketing strategies, and corporate management.</p>
+                            <ul class="internship-card__details">
+                                <li><strong>Duration:</strong> 10-12 weeks</li>
+                                <li><strong>Location:</strong> San Francisco, CA</li>
+                                <li><strong>Stipend:</strong> $16-22/hour</li>
+                                <li><strong>Requirements:</strong> Business coursework</li>
+                            </ul>
+                            <a href="/contact.html" class="button">Apply Now</a>
+                        </div>
+                    </div>
+
+                    <div class="internship-card">
+                        <div class="internship-card__header">
+                            <i class="ri-palette-line internship-card__icon"></i>
+                            <h3>Creative Arts & Design</h3>
+                        </div>
+                        <div class="internship-card__content">
+                            <p>Explore creative careers in graphic design, digital media, and artistic expression.</p>
+                            <ul class="internship-card__details">
+                                <li><strong>Duration:</strong> 8-10 weeks</li>
+                                <li><strong>Location:</strong> Los Angeles, CA</li>
+                                <li><strong>Stipend:</strong> $14-18/hour</li>
+                                <li><strong>Requirements:</strong> Portfolio submission</li>
+                            </ul>
+                            <a href="/contact.html" class="button">Apply Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== INTERNSHIP BENEFITS ====================-->
+        <section class="internship-benefits">
+            <div class="container">
+                <h2 class="section__title">Why Choose Our Internships?</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="ri-user-star-line"></i>
+                        </div>
+                        <h3>Professional Mentorship</h3>
+                        <p>Work directly with experienced professionals who guide your learning and career development.</p>
+                    </div>
+
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="ri-hand-coin-line"></i>
+                        </div>
+                        <h3>Competitive Compensation</h3>
+                        <p>Receive fair compensation for your work while gaining valuable industry experience.</p>
+                    </div>
+
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="ri-network-line"></i>
+                        </div>
+                        <h3>Networking Opportunities</h3>
+                        <p>Build connections with industry professionals and expand your professional network.</p>
+                    </div>
+
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="ri-file-list-line"></i>
+                        </div>
+                        <h3>Resume Building</h3>
+                        <p>Add real-world experience to your resume and stand out to future employers.</p>
+                    </div>
+
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="ri-graduation-cap-line"></i>
+                        </div>
+                        <h3>Academic Credit</h3>
+                        <p>Many of our internships qualify for academic credit at participating institutions.</p>
+                    </div>
+
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="ri-briefcase-4-line"></i>
+                        </div>
+                        <h3>Career Exploration</h3>
+                        <p>Discover if a particular career path is right for you through hands-on experience.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== APPLICATION PROCESS ====================-->
+        <section class="application-process">
+            <div class="container">
+                <h2 class="section__title">How to Apply</h2>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="process-step__number">1</div>
+                        <h3>Browse Opportunities</h3>
+                        <p>Explore our available internship positions and find the one that matches your interests and skills.</p>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="process-step__number">2</div>
+                        <h3>Prepare Application</h3>
+                        <p>Update your resume, write a compelling cover letter, and gather any required documents.</p>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="process-step__number">3</div>
+                        <h3>Submit Application</h3>
+                        <p>Complete our online application form and submit all required materials through our portal.</p>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="process-step__number">4</div>
+                        <h3>Interview Process</h3>
+                        <p>Participate in interviews with our team and potential supervisors to discuss your goals.</p>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="process-step__number">5</div>
+                        <h3>Acceptance & Onboarding</h3>
+                        <p>Receive your acceptance letter and complete the onboarding process to start your internship.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== TESTIMONIALS ====================-->
+        <section class="testimonials">
+            <div class="container">
+                <h2 class="section__title">What Our Interns Say</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"My internship at Evergreen Futures opened my eyes to the world of technology. The mentorship I received was invaluable, and I now have a clear path for my career."</p>
+                            <div class="testimonial-author">
+                                <h4>Sarah Johnson</h4>
+                                <span>Computer Science Student</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"The healthcare internship helped me understand what it really means to work in medicine. I gained practical skills and made connections that will last a lifetime."</p>
+                            <div class="testimonial-author">
+                                <h4>Michael Chen</h4>
+                                <span>Pre-Med Student</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"Through my business internship, I learned about marketing strategies and corporate operations. The experience was both challenging and rewarding."</p>
+                            <div class="testimonial-author">
+                                <h4>Emily Rodriguez</h4>
+                                <span>Business Administration Student</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== CTA SECTION ====================-->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to Start Your Professional Journey?</h2>
+                    <p>Apply for an internship today and take the first step towards building your career and gaining valuable real-world experience.</p>
+                    <div class="cta-buttons">
+                        <a href="/contact.html" class="button">Apply Now</a>
+                        <a href="/programs.html" class="button button--outline">Explore Programs</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer">
+        <div class="footer__container container">
+            <div class="footer__content">
+                <div>
+                    <h3 class="footer__title">Evergreen Futures</h3>
+                    <p class="footer__text">Empowering youth through career discovery and professional development.</p>
+                    <div class="footer__social">
+                        <a href="#" target="_blank" class="footer__social-link">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                        <a href="#" target="_blank" class="footer__social-link">
+                            <i class="ri-youtube-fill"></i>
+                        </a>
+                        <a href="#" target="_blank" class="footer__social-link">
+                            <i class="ri-linkedin-fill"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="footer__title">Quick Links</h3>
+                    <ul class="footer__links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/what-we-do.html">About Us</a></li>
+                        <li><a href="/programs.html">Programs</a></li>
+                        <li><a href="/internships.html">Internships</a></li>
+                        <li><a href="/blog.html">Blog</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="footer__title">Stay Updated</h3>
+                    <form id="newsletter-form" class="footer__form">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
             </div>
         </div>
-    </section>
+        <span class="footer__copy">&#169; 2024 Evergreen Futures. All rights reserved.</span>
+    </footer>
 
-    <!-- Application Form Section -->
-    <section id="apply" class="dashboard">
-        <div class="dashboard-content">
-            <h2>Application Form</h2>
-            <form>
-                <div>
-                    <label>Full Name</label>
-                    <input type="text">
-                </div>
-                <div>
-                    <label>Email</label>
-                    <input type="email">
-                </div>
-                <div>
-                    <label>Internship Position</label>
-                    <select>
-                        <option>Career Exploration Intern</option>
-                        <option>Content Development Intern</option>
-                        <option>Event Coordination Intern</option>
-                    </select>
-                </div>
-                <button type="submit" class="apply-btn">Submit Application</button>
-            </form>
-        </div>
-    </section>
+    <!--========== SCROLL UP ==========-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-line"></i>
+    </a>
 
+    <!--=============== MAIN JS ===============-->
     <script src="js/main.js"></script>
+    <script>
+    // Newsletter form
+    document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const emailInput = e.target.querySelector('input[name="email"]');
+        const email = emailInput ? emailInput.value : '';
+        
+        // Simulate form submission
+        alert('Thank you for subscribing!');
+        emailInput.value = '';
+    });
+    </script>
 </body>
 </html>

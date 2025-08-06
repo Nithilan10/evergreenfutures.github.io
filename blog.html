@@ -3,290 +3,331 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evergreen Futures Blog</title>
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <!-- Custom CSS -->
-    <style>
-        :root {
-            --primary-color: #4CAF50;
-            --secondary-color: #2E7D32;
-            --nav-height: 80px;
-            
-            /* Dark mode (default) */
-            --bg-color: #1a1a1a;
-            --text-color: #ffffff;
-            --card-bg: rgba(255, 255, 255, 0.1);
-            --navbar-bg: rgba(26, 26, 26, 0.8);
-            --dashboard-bg: linear-gradient(45deg, #1a1a1a, #2a2a2a);
-        }
-
-        [data-theme="light"] {
-            /* Light mode */
-            --bg-color: #FCF7F8;
-            --text-color: #000000;
-            --card-bg: #F7F4ED;
-            --navbar-bg: rgba(252, 247, 248, 0.8);
-            --dashboard-bg: linear-gradient(45deg, #FCF7F8, #F7F4ED);
-            --primary-color: #2B4F2B;
-            --secondary-color: #E39C30;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        /* Navigation Bar - matches index.html */
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: var(--nav-height);
-            background: var(--navbar-bg);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            padding: 0 2rem;
-            transition: background 0.3s ease;
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--text-color);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        .nav-links a {
-            color: var(--text-color);
-            text-decoration: none;
-            font-size: 1rem;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary-color);
-        }
-
-        .nav-links a.active {
-            color: var(--primary-color);
-            font-weight: 500;
-        }
-
-        .nav-buttons {
-            display: flex;
-            gap: 1rem;
-            align-items: center;
-        }
-
-        .btn {
-            padding: 0.5rem 1rem;
-            border-radius: 8px;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .btn-primary {
-            background: var(--primary-color);
-            color: white;
-            border: none;
-        }
-
-        /* Main Content */
-        main {
-            max-width: 1200px;
-            margin: var(--nav-height) auto 0;
-            padding: 2rem;
-        }
-
-        /* Blog Posts */
-        .blog-header {
-            text-align: center;
-            margin-bottom: 3rem;
-            padding-top: 2rem;
-        }
-
-        .blog-header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: var(--primary-color);
-        }
-
-        .blog-posts {
-            display: grid;
-            gap: 2rem;
-        }
-
-        .blog-post {
-            background: var(--card-bg);
-            border-radius: 8px;
-            padding: 2rem;
-            transition: transform 0.3s ease;
-        }
-
-        .blog-post:hover {
-            transform: translateY(-5px);
-        }
-
-        .post-title {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--primary-color);
-            transition: color 0.3s ease;
-        }
-
-        .post-meta {
-            color: rgba(255, 255, 255, 0.6);
-            margin-bottom: 1rem;
-            font-size: 0.9rem;
-        }
-
-        .post-excerpt {
-            line-height: 1.6;
-            margin-bottom: 1rem;
-        }
-
-        .read-more {
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 2rem;
-            color: var(--text-color);
-            opacity: 0.6;
-            font-size: 0.9rem;
-            transition: color 0.3s ease;
-        }
-    </style>
+    
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="public/images/Logo.jpeg" type="image/x-icon">
+    
+    <!--=============== REMIXICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
+    
+    <!--=============== GOOGLE FONTS ===============-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="css/styles.css?v=4.0">
+    
+    <title>Blog - Evergreen Futures</title>
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">
-                <i class="fas fa-tree"></i>
+    <!--==================== HEADER ====================-->
+    <header class="header">
+        <nav class="nav">
+            <a href="/" class="nav__logo">
+                <img src="public/images/Logo.jpeg" alt="Evergreen Futures Logo">
                 Evergreen Futures
             </a>
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="what-we-do.html">What We Do</a>
-                <a href="programs.html">Programs</a>
-                <a href="internships.html">Internships</a>
-                <a href="blog.html" class="active">Blog</a>
+            
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="/" class="nav__link">Home</a></li>
+                    <li><a href="/what-we-do.html" class="nav__link">About Us</a></li>
+                    <li><a href="/programs.html" class="nav__link">Programs</a></li>
+                    <li><a href="/internships.html" class="nav__link">Internships</a></li>
+                    <li><a href="/blog.html" class="nav__link active">Blog</a></li>
+                    <li><a href="/contact.html" class="button">Get Involved</a></li>
+                </ul>
+                
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
             </div>
-            <div class="nav-buttons">
-                <i class="fas fa-search"></i>
-                <i class="fas fa-bell"></i>
-                <button class="btn btn-primary">Login</button>
-                <i id="theme-toggle" class="fas fa-moon" style="cursor: pointer; font-size: 1.2rem;"></i>
+            
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-line"></i>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <!-- Main Content -->
-    <main>
-        <div class="blog-header">
-            <h1>Evergreen Futures Blog</h1>
-            <p>Insights and updates on career development</p>
-        </div>
+    <main class="main">
+        <!--==================== BLOG HERO ====================-->
+        <section class="page-hero">
+            <div class="container">
+                <div class="page-hero__content">
+                    <h1 class="page-hero__title">Our Blog</h1>
+                    <p class="page-hero__description">
+                        Insights, stories, and updates from our community of career explorers and professionals
+                    </p>
+                </div>
+            </div>
+        </section>
 
-        <div class="blog-posts">
-            <!-- Blog Post 1 -->
-            <article class="blog-post">
-                <h2 class="post-title">Navigating Your Career Path</h2>
-                <div class="post-meta">Published on May 15, 2023</div>
-                <p class="post-excerpt">Discover how to identify your strengths and align them with potential career opportunities in today's evolving job market.</p>
-                <a href="#" class="read-more">Read more →</a>
-            </article>
+        <!--==================== FEATURED POST ====================-->
+        <section class="featured-post">
+            <div class="container">
+                <div class="featured-post__card">
+                    <div class="featured-post__image">
+                        <img src="public/images/Banner.jpeg" alt="Career exploration success story">
+                        <span class="featured-post__badge">Featured</span>
+                    </div>
+                    <div class="featured-post__content">
+                        <div class="featured-post__meta">
+                            <span class="featured-post__date">December 15, 2024</span>
+                            <span class="featured-post__category">Success Stories</span>
+                        </div>
+                        <h2 class="featured-post__title">How Career Exploration Changed My Life: A Student's Journey</h2>
+                        <p class="featured-post__excerpt">
+                            Meet Sarah, a high school student who discovered her passion for technology through our programs. 
+                            Learn how career exploration helped her make informed decisions about her future and set her on a path to success.
+                        </p>
+                        <a href="#" class="button">Read Full Story</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            <!-- Blog Post 2 -->
-            <article class="blog-post">
-                <h2 class="post-title">The Power of Networking</h2>
-                <div class="post-meta">Published on April 28, 2023</div>
-                <p class="post-excerpt">Learn effective strategies for building professional relationships that can open doors to new opportunities.</p>
-                <a href="#" class="read-more">Read more →</a>
-            </article>
+        <!--==================== BLOG POSTS ====================-->
+        <section class="blog-posts">
+            <div class="container">
+                <div class="blog-header">
+                    <h2 class="section__title">Latest Articles</h2>
+                    <div class="blog-filters">
+                        <button class="filter-btn active" data-category="all">All Posts</button>
+                        <button class="filter-btn" data-category="career-tips">Career Tips</button>
+                        <button class="filter-btn" data-category="success-stories">Success Stories</button>
+                        <button class="filter-btn" data-category="industry-insights">Industry Insights</button>
+                        <button class="filter-btn" data-category="program-updates">Program Updates</button>
+                    </div>
+                </div>
 
-            <!-- Blog Post 3 -->
-            <article class="blog-post">
-                <h2 class="post-title">Internship Success Stories</h2>
-                <div class="post-meta">Published on March 10, 2023</div>
-                <p class="post-excerpt">Hear from students who transformed their internship experiences into full-time career opportunities.</p>
-                <a href="#" class="read-more">Read more →</a>
-            </article>
-        </div>
+                <div class="blog-grid">
+                    <article class="blog-card" data-category="career-tips">
+                        <div class="blog-card__image">
+                            <img src="public/images/download.jpeg" alt="Career planning tips">
+                        </div>
+                        <div class="blog-card__content">
+                            <div class="blog-card__meta">
+                                <span class="blog-card__date">December 12, 2024</span>
+                                <span class="blog-card__category">Career Tips</span>
+                            </div>
+                            <h3 class="blog-card__title">5 Essential Skills Every Student Should Develop</h3>
+                            <p class="blog-card__excerpt">
+                                Discover the key skills that will help you succeed in any career path, from communication to problem-solving.
+                            </p>
+                            <a href="#" class="blog-card__link">Read More</a>
+                        </div>
+                    </article>
+
+                    <article class="blog-card" data-category="success-stories">
+                        <div class="blog-card__image">
+                            <img src="public/images/public speech.jpeg" alt="Student success story">
+                        </div>
+                        <div class="blog-card__content">
+                            <div class="blog-card__meta">
+                                <span class="blog-card__date">December 10, 2024</span>
+                                <span class="blog-card__category">Success Stories</span>
+                            </div>
+                            <h3 class="blog-card__title">From Internship to Full-Time Job: Michael's Story</h3>
+                            <p class="blog-card__excerpt">
+                                How our internship program helped Michael secure a full-time position at a leading tech company.
+                            </p>
+                            <a href="#" class="blog-card__link">Read More</a>
+                        </div>
+                    </article>
+
+                    <article class="blog-card" data-category="industry-insights">
+                        <div class="blog-card__image">
+                            <img src="public/images/images.jpeg" alt="Healthcare industry insights">
+                        </div>
+                        <div class="blog-card__content">
+                            <div class="blog-card__meta">
+                                <span class="blog-card__date">December 8, 2024</span>
+                                <span class="blog-card__category">Industry Insights</span>
+                            </div>
+                            <h3 class="blog-card__title">The Future of Healthcare: Emerging Career Opportunities</h3>
+                            <p class="blog-card__excerpt">
+                                Explore the latest trends in healthcare and discover new career paths in this rapidly evolving field.
+                            </p>
+                            <a href="#" class="blog-card__link">Read More</a>
+                        </div>
+                    </article>
+
+                    <article class="blog-card" data-category="program-updates">
+                        <div class="blog-card__image">
+                            <img src="public/images/Banner.jpeg" alt="New program announcement">
+                        </div>
+                        <div class="blog-card__content">
+                            <div class="blog-card__meta">
+                                <span class="blog-card__date">December 5, 2024</span>
+                                <span class="blog-card__category">Program Updates</span>
+                            </div>
+                            <h3 class="blog-card__title">New AI & Machine Learning Workshop Series</h3>
+                            <p class="blog-card__excerpt">
+                                We're excited to announce our new workshop series focused on artificial intelligence and machine learning careers.
+                            </p>
+                            <a href="#" class="blog-card__link">Read More</a>
+                        </div>
+                    </article>
+
+                    <article class="blog-card" data-category="career-tips">
+                        <div class="blog-card__image">
+                            <img src="public/images/download.jpeg" alt="Networking tips">
+                        </div>
+                        <div class="blog-card__content">
+                            <div class="blog-card__meta">
+                                <span class="blog-card__date">December 3, 2024</span>
+                                <span class="blog-card__category">Career Tips</span>
+                            </div>
+                            <h3 class="blog-card__title">Building Your Professional Network: A Beginner's Guide</h3>
+                            <p class="blog-card__excerpt">
+                                Learn effective networking strategies that will help you connect with professionals in your field of interest.
+                            </p>
+                            <a href="#" class="blog-card__link">Read More</a>
+                        </div>
+                    </article>
+
+                    <article class="blog-card" data-category="success-stories">
+                        <div class="blog-card__image">
+                            <img src="public/images/public speech.jpeg" alt="Creative career success">
+                        </div>
+                        <div class="blog-card__content">
+                            <div class="blog-card__meta">
+                                <span class="blog-card__date">November 30, 2024</span>
+                                <span class="blog-card__category">Success Stories</span>
+                            </div>
+                            <h3 class="blog-card__title">Pursuing a Creative Career: Emily's Artistic Journey</h3>
+                            <p class="blog-card__excerpt">
+                                How Emily discovered her passion for graphic design and built a successful career in the creative industry.
+                            </p>
+                            <a href="#" class="blog-card__link">Read More</a>
+                        </div>
+                    </article>
+                </div>
+
+                <!--==================== BLOG PAGINATION ====================-->
+                <div class="blog-pagination">
+                    <button class="pagination-btn active">1</button>
+                    <button class="pagination-btn">2</button>
+                    <button class="pagination-btn">3</button>
+                    <button class="pagination-btn">Next</button>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== BLOG NEWSLETTER ====================-->
+        <section class="blog-newsletter">
+            <div class="container">
+                <div class="newsletter-content">
+                    <h2>Stay Updated with Our Latest Content</h2>
+                    <p>Subscribe to our newsletter to receive the latest career insights, success stories, and program updates directly in your inbox.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email address" required>
+                        <button type="submit" class="button">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer>
-        <p>© 2023 Evergreen Futures. All rights reserved.</p>
+    <!--==================== FOOTER ====================-->
+    <footer class="footer">
+        <div class="footer__container container">
+            <div class="footer__content">
+                <div>
+                    <h3 class="footer__title">Evergreen Futures</h3>
+                    <p class="footer__text">Empowering youth through career discovery and professional development.</p>
+                    <div class="footer__social">
+                        <a href="#" target="_blank" class="footer__social-link">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                        <a href="#" target="_blank" class="footer__social-link">
+                            <i class="ri-youtube-fill"></i>
+                        </a>
+                        <a href="#" target="_blank" class="footer__social-link">
+                            <i class="ri-linkedin-fill"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="footer__title">Quick Links</h3>
+                    <ul class="footer__links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/what-we-do.html">About Us</a></li>
+                        <li><a href="/programs.html">Programs</a></li>
+                        <li><a href="/internships.html">Internships</a></li>
+                        <li><a href="/blog.html">Blog</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="footer__title">Stay Updated</h3>
+                    <form id="newsletter-form" class="footer__form">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <span class="footer__copy">&#169; 2024 Evergreen Futures. All rights reserved.</span>
     </footer>
 
+    <!--========== SCROLL UP ==========-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-line"></i>
+    </a>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="js/main.js"></script>
     <script>
-        // Theme toggle functionality
-        const themeToggle = document.getElementById('theme-toggle');
-        const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-        const currentTheme = localStorage.getItem('theme');
+    // Blog filtering functionality
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const blogCards = document.querySelectorAll('.blog-card');
 
-        if (currentTheme === 'light' || (!currentTheme && !prefersDarkScheme.matches)) {
-            document.documentElement.setAttribute('data-theme', 'light');
-            themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-        }
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Remove active class from all buttons
+            filterBtns.forEach(b => b.classList.remove('active'));
+            // Add active class to clicked button
+            btn.classList.add('active');
 
-        themeToggle.addEventListener('click', () => {
-            let theme = 'dark';
-            if (document.documentElement.getAttribute('data-theme') === 'dark') {
-                document.documentElement.setAttribute('data-theme', 'light');
-                themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-                theme = 'light';
-            } else {
-                document.documentElement.setAttribute('data-theme', 'dark');
-                themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-            }
-            localStorage.setItem('theme', theme);
+            const category = btn.getAttribute('data-category');
+
+            blogCards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
         });
+    });
 
-        // Add scroll event listener for navbar
-        window.addEventListener('scroll', () => {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.style.background = 'rgba(26, 26, 26, 0.95)';
-            } else {
-                navbar.style.background = 'rgba(26, 26, 26, 0.8)';
-            }
+    // Newsletter forms
+    const newsletterForms = document.querySelectorAll('.newsletter-form, #newsletter-form');
+    newsletterForms.forEach(form => {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const emailInput = e.target.querySelector('input[type="email"]');
+            const email = emailInput ? emailInput.value : '';
+            
+            // Simulate form submission
+            alert('Thank you for subscribing!');
+            emailInput.value = '';
         });
+    });
+
+    // Pagination functionality
+    const paginationBtns = document.querySelectorAll('.pagination-btn');
+    paginationBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            paginationBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            // Here you would typically load new content or navigate to different page
+        });
+    });
     </script>
 </body>
 </html>

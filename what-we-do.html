@@ -3,78 +3,323 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>What We Do | Evergreen Futures</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="css/styles.css">
+    
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="public/images/Logo.jpeg" type="image/x-icon">
+    
+    <!--=============== REMIXICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
+    
+    <!--=============== GOOGLE FONTS ===============-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="css/styles.css?v=4.0">
+    
+    <title>About Us - Evergreen Futures</title>
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">
-                <i class="fas fa-tree"></i>
+    <!--==================== HEADER ====================-->
+    <header class="header">
+        <nav class="nav">
+            <a href="/" class="nav__logo">
+                <img src="public/images/Logo.jpeg" alt="Evergreen Futures Logo">
                 Evergreen Futures
             </a>
-            <div class="nav-links">
-                <a href="极光加速器下载_极光加速器安卓版下载_极光加速器官方版下载-太平洋下载中心:2021-6-15 · 极光加速器官方版是款可伍帮助用户们快速加速网络的工具。极光加速器最新版可伍帮助用户一键加速，降低延迟，提高网速，让用户可伍流畅的观看视频、玩游戏等。极光加速器还可伍帮助用户智能选择最优线路，让用户可伍快速的访问网络，并且软件还拥有超强的兼容性，可伍兼容各种游戏和应用程序。.html">Home</a>
-                <a href="what-we-do.html" class="active">What We Do</a>
-                <a href="programs.html">Programs</a>
-                <a href="internships.html">Internships</a>
-                <a href="blog.html">Blog</a>
-            </div>
-            <div class="nav-buttons">
-                <i class="fas fa-search"></i>
-                <i class="fas fa-bell"></i>
-                <button class="btn btn-primary">Login</button>
-                <i id="theme-toggle" class="fas fa-moon" style="cursor: pointer; font-size: 1.2rem;"></i>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Empowering Youth Through Career Discovery</h1>
-            <p>EvergreenFutures empowers children to explore diverse career paths through dynamic programs and real-world experiences.</p>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-discord"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-tiktok"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Mission Section -->
-    <section class="dashboard">
-        <div class="dashboard-content">
-            <h2>Our Mission</h2>
-            <p>We provide children and teenagers dynamic speeches, interactive workshops, and engaging competitions where we connect them with professionals to gain practical insights into each career's challenges, rewards, opportunities, and prepare them for the real world and the journey ahead!</p>
-        </div>
-    </section>
-
-    <!-- Programs Grid -->
-    <section class="dashboard">
-        <div class="dashboard-content">
-            <h2>Our Approach</h2>
-            <div class="dashboard-grid">
-                <div class="dashboard-card">
-                    <h3>Career Speeches</h3>
-                    <p>Inspirational talks from industry professionals across diverse fields.</p>
-                </div>
-                <div class="dashboard-card">
-                    <h3>Workshops</h3>
-                    <p>Hands-on activities to explore different career paths.</p>
-                </div>
-                <div class="dashboard-card">
-                    <h3>Competitions</h3>
-                    <p>Challenges that develop real-world skills and knowledge.</p>
+            
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a href="/" class="nav__link">Home</a></li>
+                    <li><a href="/what-we-do.html" class="nav__link active">About Us</a></li>
+                    <li><a href="/programs.html" class="nav__link">Programs</a></li>
+                    <li><a href="/internships.html" class="nav__link">Internships</a></li>
+                    <li><a href="/blog.html" class="nav__link">Blog</a></li>
+                    <li><a href="/contact.html" class="button">Get Involved</a></li>
+                </ul>
+                
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
                 </div>
             </div>
-        </div>
-    </section>
+            
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-line"></i>
+            </div>
+        </nav>
+    </header>
 
+    <main class="main">
+        <!--==================== ABOUT HERO ====================-->
+        <section class="about-hero">
+            <div class="slideshow-container">
+                <!-- Slides -->
+                <div class="slide fade">
+                    <img src="public/images/Banner.jpeg" alt="Career exploration">
+                    <div class="slide-content">
+                        <span class="slide-tag">Career Discovery</span>
+                        <h2 class="slide-title">Empowering Youth Through Career Exploration</h2>
+                        <p class="slide-description">
+                            Connecting students with real-world professionals to discover their passion and potential.
+                        </p>
+                        <div class="slide-buttons">
+                            <a href="./blog.html" class="button">Success Stories</a>
+                            <a href="/contact.html" class="button button--outline">Get Involved</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide fade">
+                    <img src="public/images/download.jpeg" alt="Professional development">
+                    <div class="slide-content">
+                        <span class="slide-tag">Our Mission</span>
+                        <h2 class="slide-title">Building Future Leaders</h2>
+                        <p class="slide-description">
+                            Providing dynamic programs that prepare youth for the real world and their journey ahead.
+                        </p>
+                        <div class="slide-buttons">
+                            <a href="#ourstory" class="slide-button button" id="scroll-to-ourstory">Our Story</a>
+                            <a href="/programs.html" class="button button--outline">Our Programs</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide fade">
+                    <img src="public/images/public speech.jpeg" alt="Professional speaking">
+                    <div class="slide-content">
+                        <span class="slide-tag">Community Impact</span>
+                        <h2 class="slide-title">Inspiring the Next Generation</h2>
+                        <p class="slide-description">
+                            Join us in our mission to empower youth through career discovery and professional development.
+                        </p>
+                        <div class="slide-buttons">
+                            <a href="#ourstory" class="slide-button button" id="scroll-to-ourstory">Learn More</a>
+                            <a href="/contact.html" class="button button--outline">Support Us</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation arrows -->
+                <button class="slide-nav prev">
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                        <path fill="white" d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6z"/>
+                    </svg>
+                </button>
+                
+                <button class="slide-nav next">
+                    <svg width="24" height="24" viewBox="0 0 24 24">
+                        <path fill="white" d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/>
+                    </svg>
+                </button>
+
+                <!-- Navigation dots -->
+                <div class="slide-dots">
+                    <span class="dot active" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Story Section -->
+        <section class="story" id="ourstory">
+            <div class="story__container container">
+                <div class="story__content">
+                    <h2 class="section__title">Our Story</h2>
+                    <p class="story__description">
+                        Evergreen Futures began with a simple yet powerful vision: to bridge the gap between education and real-world career opportunities. We recognized that many students graduate without a clear understanding of the diverse career paths available to them, limiting their potential and aspirations.
+                    </p>
+                    <p class="story__description">
+                        Founded by passionate educators and professionals, our initiative started as a local career exploration program but quickly grew into a comprehensive platform. We bring together industry experts, successful professionals, and curious students to create meaningful connections and inspire future career choices.
+                    </p>
+                </div>
+                <div class="story__image">
+                    <img src="public/images/images.jpeg" alt="Students exploring careers">
+                </div>
+            </div>
+        </section>
+
+        <!-- Impact Numbers Section -->
+        <section class="numbers">
+            <div class="numbers__container container">
+                <div class="numbers__item">
+                    <h3 class="numbers__value">1000+</h3>
+                    <p class="numbers__description">Students Empowered</p>
+                </div>
+                <div class="numbers__item">
+                    <h3 class="numbers__value">50+</h3>
+                    <p class="numbers__description">Professional Speakers</p>
+                </div>
+                <div class="numbers__item">
+                    <h3 class="numbers__value">25+</h3>
+                    <p class="numbers__description">Career Fields Explored</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Approach Section -->
+        <section class="approach">
+            <div class="approach__container container">
+                <h2 class="section__title">Our Approach</h2>
+                <div class="approach__grid">
+                    <div class="approach__item">
+                        <i class="ri-mic-line approach__icon"></i>
+                        <h3 class="approach__title">Dynamic Speeches</h3>
+                        <p class="approach__description">
+                            Inspirational talks from industry professionals sharing their career journeys, challenges, and insights.
+                        </p>
+                    </div>
+                    <div class="approach__item">
+                        <i class="ri-tools-line approach__icon"></i>
+                        <h3 class="approach__title">Interactive Workshops</h3>
+                        <p class="approach__description">
+                            Hands-on activities and skill-building sessions that give students practical experience in various fields.
+                        </p>
+                    </div>
+                    <div class="approach__item">
+                        <i class="ri-trophy-line approach__icon"></i>
+                        <h3 class="approach__title">Engaging Competitions</h3>
+                        <p class="approach__description">
+                            Competitive challenges that develop real-world skills and showcase student creativity and talent.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Join Us Section -->
+        <section class="join">
+            <div class="join__container container">
+                <h2 class="join__title">Join Our Mission</h2>
+                <p class="join__description">
+                    Together, we can inspire and empower more students to discover their passion and build successful careers.
+                </p>
+                <div class="join__buttons">
+                    <a href="/contact.html" class="button">Get Involved</a>
+                    <a href="/programs.html" class="button button--outline">Explore Programs</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer">
+        <div class="footer__container container">
+            <div class="footer__content">
+                <div>
+                    <h3 class="footer__title">Evergreen Futures</h3>
+                    <p class="footer__text">Empowering youth through career discovery and professional development.</p>
+                    <div class="footer__social">
+                        <a href="#" target="_blank" class="footer__social-link">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                        <a href="#" target="_blank" class="footer__social-link">
+                            <i class="ri-youtube-fill"></i>
+                        </a>
+                        <a href="#" target="_blank" class="footer__social-link">
+                            <i class="ri-linkedin-fill"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="footer__title">Quick Links</h3>
+                    <ul class="footer__links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/what-we-do.html">About Us</a></li>
+                        <li><a href="/programs.html">Programs</a></li>
+                        <li><a href="/internships.html">Internships</a></li>
+                        <li><a href="/blog.html">Blog</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="footer__title">Stay Updated</h3>
+                    <form id="newsletter-form" class="footer__form">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <span class="footer__copy">&#169; 2024 Evergreen Futures. All rights reserved.</span>
+    </footer>
+
+    <!--========== SCROLL UP ==========-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-line"></i>
+    </a>
+
+    <!--=============== MAIN JS ===============-->
     <script src="js/main.js"></script>
+    <script>
+    // Slideshow functionality
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("slide");
+        let dots = document.getElementsByClassName("dot");
+        
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+    }
+
+    // Auto advance slides
+    setInterval(() => {
+        slideIndex++;
+        showSlides(slideIndex);
+    }, 5000);
+
+    // Navigation arrows
+    document.querySelector('.prev').addEventListener('click', () => {
+        currentSlide(slideIndex - 1);
+    });
+
+    document.querySelector('.next').addEventListener('click', () => {
+        currentSlide(slideIndex + 1);
+    });
+
+    // Smooth scroll for internal anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // Newsletter form
+    document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const emailInput = e.target.querySelector('input[name="email"]');
+        const email = emailInput ? emailInput.value : '';
+        
+        // Simulate form submission
+        alert('Thank you for subscribing!');
+        emailInput.value = '';
+    });
+    </script>
 </body>
 </html>
